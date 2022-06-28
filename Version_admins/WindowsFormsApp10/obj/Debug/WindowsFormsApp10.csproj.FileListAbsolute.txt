@@ -1,0 +1,54 @@
+C:\Users\alumno\source\repos\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csprojAssemblyReference.cache
+C:\Users\alumno\source\repos\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\Interop.ADODB.dll
+C:\Users\alumno\source\repos\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csproj.ResolveComReference.cache
+C:\Users\alumno\source\repos\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Login.resources
+C:\Users\alumno\source\repos\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Principal.resources
+C:\Users\alumno\source\repos\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Properties.Resources.resources
+C:\Users\alumno\source\repos\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csproj.GenerateResource.cache
+C:\Users\alumno\source\repos\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csproj.CoreCompileInputs.cache
+C:\Users\alumno\source\repos\WindowsFormsApp10\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe.config
+C:\Users\alumno\source\repos\WindowsFormsApp10\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe
+C:\Users\alumno\source\repos\WindowsFormsApp10\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.pdb
+C:\Users\alumno\source\repos\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.exe
+C:\Users\alumno\source\repos\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.pdb
+C:\Users\bplim\Documents\Programacion 3\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe.config
+C:\Users\bplim\Documents\Programacion 3\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe
+C:\Users\bplim\Documents\Programacion 3\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.pdb
+C:\Users\bplim\Documents\Programacion 3\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csprojAssemblyReference.cache
+C:\Users\bplim\Documents\Programacion 3\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\Interop.ADODB.dll
+C:\Users\bplim\Documents\Programacion 3\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csproj.ResolveComReference.cache
+C:\Users\bplim\Documents\Programacion 3\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Login.resources
+C:\Users\bplim\Documents\Programacion 3\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Principal.resources
+C:\Users\bplim\Documents\Programacion 3\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Properties.Resources.resources
+C:\Users\bplim\Documents\Programacion 3\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csproj.GenerateResource.cache
+C:\Users\bplim\Documents\Programacion 3\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csproj.CoreCompileInputs.cache
+C:\Users\bplim\Documents\Programacion 3\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.exe
+C:\Users\bplim\Documents\Programacion 3\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.pdb
+C:\Users\bplim\Documents\Programacion 3\Version admins\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe.config
+C:\Users\bplim\Documents\Programacion 3\Version admins\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe
+C:\Users\bplim\Documents\Programacion 3\Version admins\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.pdb
+C:\Users\bplim\Documents\Programacion 3\Version admins\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csprojAssemblyReference.cache
+C:\Users\bplim\Documents\Programacion 3\Version admins\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\Interop.ADODB.dll
+C:\Users\bplim\Documents\Programacion 3\Version admins\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csproj.ResolveComReference.cache
+C:\Users\bplim\Documents\Programacion 3\Version admins\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Login.resources
+C:\Users\bplim\Documents\Programacion 3\Version admins\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Principal.resources
+C:\Users\bplim\Documents\Programacion 3\Version admins\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Properties.Resources.resources
+C:\Users\bplim\Documents\Programacion 3\Version admins\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csproj.GenerateResource.cache
+C:\Users\bplim\Documents\Programacion 3\Version admins\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csproj.CoreCompileInputs.cache
+C:\Users\bplim\Documents\Programacion 3\Version admins\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.exe
+C:\Users\bplim\Documents\Programacion 3\Version admins\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.pdb
+C:\Users\bplim\Documents\Programacion 3\Version admins\WindowsFormsApp10\WindowsFormsApp10\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Eventos.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\Version admins\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe.config
+C:\Users\bplim\Documents\Repositorio Proyecto\Version admins\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe
+C:\Users\bplim\Documents\Repositorio Proyecto\Version admins\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.pdb
+C:\Users\bplim\Documents\Repositorio Proyecto\Version admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csprojAssemblyReference.cache
+C:\Users\bplim\Documents\Repositorio Proyecto\Version admins\WindowsFormsApp10\obj\Debug\Interop.ADODB.dll
+C:\Users\bplim\Documents\Repositorio Proyecto\Version admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csproj.ResolveComReference.cache
+C:\Users\bplim\Documents\Repositorio Proyecto\Version admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Eventos.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\Version admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Login.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\Version admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Principal.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\Version admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Properties.Resources.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\Version admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csproj.GenerateResource.cache
+C:\Users\bplim\Documents\Repositorio Proyecto\Version admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.csproj.CoreCompileInputs.cache
+C:\Users\bplim\Documents\Repositorio Proyecto\Version admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.exe
+C:\Users\bplim\Documents\Repositorio Proyecto\Version admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.pdb
