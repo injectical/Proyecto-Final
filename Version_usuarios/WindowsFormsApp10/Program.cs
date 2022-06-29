@@ -14,6 +14,7 @@ namespace WindowsFormsApp10
         public static Perfil frmPerfil;
         public static Eventos frmEventos;
         public static Registro frmRegistro;
+        public static Notificaciones frmNotificaciones;
         public static string nombreUsuario;
 
         //public static Clientes frmClientes;
@@ -68,13 +69,13 @@ namespace WindowsFormsApp10
                     rol = Convert.ToByte(rs.Fields[0].Value);//convierte lo que reciba a el tipo de dato byte, y lo asignamos a la variable rol
 
                     //AVERIGUA SI LA SESIÓN ESTA ABIERTA Y CUÁL ES EL ROL DEL USUARIO
-                    if (rol == 2) {
+                   
 
                         frmPrincipal.btnEventos.Enabled = true;
                         frmPrincipal.menuGestion.Enabled = true;
                         frmPrincipal.menuLogout.Enabled = true;
 
-                    }
+                    
 
                     rs = null;
                     contFilas = null;

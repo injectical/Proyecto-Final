@@ -12,6 +12,7 @@ namespace WindowsFormsApp10
         public static Principal frmPrincipal;
         public static Login frmLogin;
         public static Eventos frmEventos;
+        public static Uruguay frmUruguay;
 
         //public static Clientes frmClientes;
 

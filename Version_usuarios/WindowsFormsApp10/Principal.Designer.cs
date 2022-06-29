@@ -38,6 +38,8 @@
             this.lblInicioSesion = new System.Windows.Forms.Label();
             this.btnEventos = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.menuNotificaciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.verPagisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogin)).BeginInit();
             this.menuContenedor.SuspendLayout();
             this.SuspendLayout();
@@ -83,14 +85,17 @@
             // modificarPerfilToolStripMenuItem
             // 
             this.modificarPerfilToolStripMenuItem.Name = "modificarPerfilToolStripMenuItem";
-            this.modificarPerfilToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
+            this.modificarPerfilToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
             this.modificarPerfilToolStripMenuItem.Text = "Modificar perfil";
             this.modificarPerfilToolStripMenuItem.Click += new System.EventHandler(this.modificarPerfilToolStripMenuItem_Click);
             // 
             // verMembresíaToolStripMenuItem
             // 
+            this.verMembresíaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuNotificaciones,
+            this.verPagisToolStripMenuItem});
             this.verMembresíaToolStripMenuItem.Name = "verMembresíaToolStripMenuItem";
-            this.verMembresíaToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
+            this.verMembresíaToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
             this.verMembresíaToolStripMenuItem.Text = "Ver membresía";
             // 
             // menuLogout
@@ -132,6 +137,19 @@
             this.linkLabel1.Size = new System.Drawing.Size(0, 17);
             this.linkLabel1.TabIndex = 15;
             // 
+            // menuNotificaciones
+            // 
+            this.menuNotificaciones.Name = "menuNotificaciones";
+            this.menuNotificaciones.Size = new System.Drawing.Size(216, 28);
+            this.menuNotificaciones.Text = "Notificaciones";
+            this.menuNotificaciones.Click += new System.EventHandler(this.menuNotificaciones_Click_1);
+            // 
+            // verPagisToolStripMenuItem
+            // 
+            this.verPagisToolStripMenuItem.Name = "verPagisToolStripMenuItem";
+            this.verPagisToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
+            this.verPagisToolStripMenuItem.Text = "Ver pagos";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -167,6 +185,8 @@
         private System.Windows.Forms.ToolStripMenuItem verMembresíaToolStripMenuItem;
         public System.Windows.Forms.Button btnEventos;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.ToolStripMenuItem menuNotificaciones;
+        private System.Windows.Forms.ToolStripMenuItem verPagisToolStripMenuItem;
     }
 }
 

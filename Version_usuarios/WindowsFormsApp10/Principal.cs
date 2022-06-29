@@ -28,9 +28,9 @@ namespace WindowsFormsApp10
         public void Principal_Load(object sender, EventArgs e)
         {
 
-            btnEventos.Enabled = false;
-            menuGestion.Enabled = false;
-            menuLogout.Enabled = false;
+            btnEventos.Enabled = true;
+            menuGestion.Enabled = true;
+            menuLogout.Enabled = true;
 
         }
 
@@ -47,7 +47,7 @@ namespace WindowsFormsApp10
         private void modificarPerfilToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Program.frmPerfil = new Perfil();
-            Program.frmPerfil.MdiParent = this;
+            //Program.frmPerfil.MdiParent = this;
             Program.frmPerfil.Show();
             
         }
@@ -59,7 +59,20 @@ namespace WindowsFormsApp10
 
         private void btnEventos_Click(object sender, EventArgs e)
         {
+            
+            Program.frmEventos = new Eventos();
+            Program.frmEventos.Show();
+        }
 
+        private void menuNotificaciones_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuNotificaciones_Click_1(object sender, EventArgs e)
+        {
+            Program.frmNotificaciones = new Notificaciones();
+            Program.frmNotificaciones.Show();
         }
     }
 }

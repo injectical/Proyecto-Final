@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lnkUruguay = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
@@ -64,18 +64,20 @@
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // linkLabel1
+            // lnkUruguay
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F);
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(25, 44);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(73, 22);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Uruguay";
+            this.lnkUruguay.AutoSize = true;
+            this.lnkUruguay.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F);
+            this.lnkUruguay.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkUruguay.LinkColor = System.Drawing.Color.Black;
+            this.lnkUruguay.Location = new System.Drawing.Point(25, 44);
+            this.lnkUruguay.Name = "lnkUruguay";
+            this.lnkUruguay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lnkUruguay.Size = new System.Drawing.Size(73, 22);
+            this.lnkUruguay.TabIndex = 0;
+            this.lnkUruguay.TabStop = true;
+            this.lnkUruguay.Text = "Uruguay";
+            this.lnkUruguay.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkUruguay_LinkClicked);
             // 
             // linkLabel2
             // 
@@ -122,7 +124,7 @@
             this.groupBox1.Controls.Add(this.linkLabel7);
             this.groupBox1.Controls.Add(this.linkLabel6);
             this.groupBox1.Controls.Add(this.linkLabel5);
-            this.groupBox1.Controls.Add(this.linkLabel1);
+            this.groupBox1.Controls.Add(this.lnkUruguay);
             this.groupBox1.Controls.Add(this.linkLabel4);
             this.groupBox1.Controls.Add(this.linkLabel2);
             this.groupBox1.Controls.Add(this.linkLabel3);
@@ -520,7 +522,7 @@
 
         #endregion
 
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lnkUruguay;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel linkLabel4;

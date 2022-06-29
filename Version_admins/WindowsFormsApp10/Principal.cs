@@ -27,10 +27,10 @@ namespace WindowsFormsApp10
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            menuEventos.Enabled = false;
-            menuGestionUsuarios.Enabled = false;
-            menuLogin.Enabled = false;
-            lnkEventos.Enabled = false;
+            menuEventos.Enabled = true;
+            menuGestionUsuarios.Enabled = true;
+            menuLogin.Enabled = true;
+            lnkEventos.Enabled = true;
 
 
         }
