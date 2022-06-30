@@ -91,8 +91,12 @@ namespace WindowsFormsApp10
             string sqlApellido;
             string sqlEmail;
             string sqlMiembro;
+            ADODB.Recordset rs;
+            object contfilas;
             //SEGUN EL NOMBRE (NOMBRE DE USUARIO) TE TRAE LOS OTROS DATOS
             sqlNombre = "select Nombre from Usuarios where Nombre = '" + usuario + "';";
+            rs = conexion.Execute(sqlNombre, out contfilas);
+            sqlNombre = Convert.ToString(rs.Fields[0].Value);
             frmPerfil.txtNombre.Text = sqlNombre;
             sqlApellido = "select Apellido from Usuarios where Nombre = '" + usuario + "';";
             frmPerfil.txtApellido.Text = sqlApellido;

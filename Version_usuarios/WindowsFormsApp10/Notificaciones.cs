@@ -21,5 +21,12 @@ namespace WindowsFormsApp10
         {
 
         }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            //ENVIARIA LA INFORMACION QUE SAQUE DEL CHECKED LISTBOX A LA TABLA DE NOTIFICACIONES DE USUARIO
+            
+
+        }
     }
 }
