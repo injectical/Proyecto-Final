@@ -28,103 +28,112 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblContraseña = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
             this.lnkVolver = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(160, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 22);
-            this.textBox1.TabIndex = 0;
+            this.txtNombre.Location = new System.Drawing.Point(200, 102);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(202, 28);
+            this.txtNombre.TabIndex = 0;
             // 
-            // textBox3
+            // txtContraseña
             // 
-            this.textBox3.Location = new System.Drawing.Point(160, 230);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(162, 22);
-            this.textBox3.TabIndex = 2;
+            this.txtContraseña.Location = new System.Drawing.Point(200, 316);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(202, 28);
+            this.txtContraseña.TabIndex = 2;
             // 
-            // textBox4
+            // txtEmail
             // 
-            this.textBox4.Location = new System.Drawing.Point(160, 174);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(162, 22);
-            this.textBox4.TabIndex = 3;
+            this.txtEmail.Location = new System.Drawing.Point(200, 239);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(202, 28);
+            this.txtEmail.TabIndex = 3;
             // 
-            // textBox5
+            // txtApellido
             // 
-            this.textBox5.Location = new System.Drawing.Point(160, 122);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(162, 22);
-            this.textBox5.TabIndex = 4;
+            this.txtApellido.Location = new System.Drawing.Point(200, 168);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(202, 28);
+            this.txtApellido.TabIndex = 4;
             // 
-            // label1
+            // lblNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 17);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Nombre";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(76, 103);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(79, 24);
+            this.lblNombre.TabIndex = 5;
+            this.lblNombre.Text = "Nombre";
             // 
-            // label2
+            // lblContraseña
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 235);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 17);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Contraseña";
+            this.lblContraseña.AutoSize = true;
+            this.lblContraseña.Location = new System.Drawing.Point(76, 323);
+            this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(106, 24);
+            this.lblContraseña.TabIndex = 6;
+            this.lblContraseña.Text = "Contraseña";
             // 
-            // label3
+            // lblEmail
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(62, 179);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 17);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Email";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(78, 246);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(57, 24);
+            this.lblEmail.TabIndex = 7;
+            this.lblEmail.Text = "Email";
             // 
-            // label4
+            // lblApellido
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(61, 124);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 17);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Apellido";
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(76, 170);
+            this.lblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(79, 24);
+            this.lblApellido.TabIndex = 8;
+            this.lblApellido.Text = "Apellido";
             // 
             // button1
             // 
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(138, 294);
+            this.button1.Location = new System.Drawing.Point(118, 417);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 28);
+            this.button1.Size = new System.Drawing.Size(99, 38);
             this.button1.TabIndex = 9;
             this.button1.Text = "Enviar ";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnBorrar
             // 
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(248, 293);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 29);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Borrar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBorrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBorrar.Location = new System.Drawing.Point(280, 417);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(94, 40);
+            this.btnBorrar.TabIndex = 10;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
             // 
             // lnkVolver
             // 
@@ -132,7 +141,8 @@
             this.lnkVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkVolver.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lnkVolver.LinkColor = System.Drawing.Color.Red;
-            this.lnkVolver.Location = new System.Drawing.Point(21, 23);
+            this.lnkVolver.Location = new System.Drawing.Point(26, 32);
+            this.lnkVolver.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lnkVolver.Name = "lnkVolver";
             this.lnkVolver.Size = new System.Drawing.Size(64, 24);
             this.lnkVolver.TabIndex = 11;
@@ -142,22 +152,24 @@
             // 
             // Registro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(381, 382);
+            this.ClientSize = new System.Drawing.Size(476, 525);
             this.Controls.Add(this.lnkVolver);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblApellido);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblContraseña);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.txtNombre);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Registro";
             this.Text = "Formulario de registro de usuario";
             this.ResumeLayout(false);
@@ -167,16 +179,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblContraseña;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.LinkLabel lnkVolver;
     }
 }

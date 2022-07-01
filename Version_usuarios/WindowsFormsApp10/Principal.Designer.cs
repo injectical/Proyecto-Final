@@ -34,10 +34,12 @@
             this.menuGestion = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarPerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verMembresíaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuNotificaciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.verPagisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.lblInicioSesion = new System.Windows.Forms.Label();
             this.btnEventos = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lblSaludo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogin)).BeginInit();
             this.menuContenedor.SuspendLayout();
             this.SuspendLayout();
@@ -48,15 +50,15 @@
             this.pbLogin.AccessibleName = "";
             this.pbLogin.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.pbLogin.Image = ((System.Drawing.Image)(resources.GetObject("pbLogin.Image")));
-            this.pbLogin.Location = new System.Drawing.Point(816, 47);
+            this.pbLogin.Location = new System.Drawing.Point(950, 35);
             this.pbLogin.Margin = new System.Windows.Forms.Padding(4);
             this.pbLogin.Name = "pbLogin";
-            this.pbLogin.Size = new System.Drawing.Size(47, 49);
+            this.pbLogin.Size = new System.Drawing.Size(47, 52);
             this.pbLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogin.TabIndex = 0;
             this.pbLogin.TabStop = false;
             this.pbLogin.Tag = "";
-            this.pbLogin.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pbLogin.Click += new System.EventHandler(this.pbLogin_Click);
             // 
             // menuContenedor
             // 
@@ -83,15 +85,31 @@
             // modificarPerfilToolStripMenuItem
             // 
             this.modificarPerfilToolStripMenuItem.Name = "modificarPerfilToolStripMenuItem";
-            this.modificarPerfilToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
+            this.modificarPerfilToolStripMenuItem.Size = new System.Drawing.Size(200, 28);
             this.modificarPerfilToolStripMenuItem.Text = "Modificar perfil";
             this.modificarPerfilToolStripMenuItem.Click += new System.EventHandler(this.modificarPerfilToolStripMenuItem_Click);
             // 
             // verMembresíaToolStripMenuItem
             // 
+            this.verMembresíaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuNotificaciones,
+            this.verPagisToolStripMenuItem});
             this.verMembresíaToolStripMenuItem.Name = "verMembresíaToolStripMenuItem";
-            this.verMembresíaToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
+            this.verMembresíaToolStripMenuItem.Size = new System.Drawing.Size(200, 28);
             this.verMembresíaToolStripMenuItem.Text = "Ver membresía";
+            // 
+            // menuNotificaciones
+            // 
+            this.menuNotificaciones.Name = "menuNotificaciones";
+            this.menuNotificaciones.Size = new System.Drawing.Size(193, 28);
+            this.menuNotificaciones.Text = "Notificaciones";
+            this.menuNotificaciones.Click += new System.EventHandler(this.menuNotificaciones_Click_1);
+            // 
+            // verPagisToolStripMenuItem
+            // 
+            this.verPagisToolStripMenuItem.Name = "verPagisToolStripMenuItem";
+            this.verPagisToolStripMenuItem.Size = new System.Drawing.Size(193, 28);
+            this.verPagisToolStripMenuItem.Text = "Ver pagos";
             // 
             // menuLogout
             // 
@@ -99,18 +117,17 @@
             this.menuLogout.Name = "menuLogout";
             this.menuLogout.Size = new System.Drawing.Size(76, 27);
             this.menuLogout.Text = "Logout";
-            this.menuLogout.Click += new System.EventHandler(this.menuLogin_Click);
+            this.menuLogout.Click += new System.EventHandler(this.menuLogout_Click);
             // 
             // lblInicioSesion
             // 
             this.lblInicioSesion.AutoSize = true;
             this.lblInicioSesion.Font = new System.Drawing.Font("Perpetua Titling MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInicioSesion.Location = new System.Drawing.Point(768, 100);
+            this.lblInicioSesion.Location = new System.Drawing.Point(904, 101);
             this.lblInicioSesion.Name = "lblInicioSesion";
             this.lblInicioSesion.Size = new System.Drawing.Size(138, 20);
             this.lblInicioSesion.TabIndex = 5;
             this.lblInicioSesion.Text = "Iniciar Sesion";
-            this.lblInicioSesion.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnEventos
             // 
@@ -124,13 +141,14 @@
             this.btnEventos.UseVisualStyleBackColor = false;
             this.btnEventos.Click += new System.EventHandler(this.btnEventos_Click);
             // 
-            // linkLabel1
+            // lblSaludo
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(795, 134);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(0, 17);
-            this.linkLabel1.TabIndex = 15;
+            this.lblSaludo.AutoSize = true;
+            this.lblSaludo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaludo.Location = new System.Drawing.Point(32, 47);
+            this.lblSaludo.Name = "lblSaludo";
+            this.lblSaludo.Size = new System.Drawing.Size(0, 24);
+            this.lblSaludo.TabIndex = 16;
             // 
             // Principal
             // 
@@ -139,7 +157,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.lblSaludo);
             this.Controls.Add(this.btnEventos);
             this.Controls.Add(this.lblInicioSesion);
             this.Controls.Add(this.pbLogin);
@@ -166,7 +184,9 @@
         private System.Windows.Forms.ToolStripMenuItem modificarPerfilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verMembresíaToolStripMenuItem;
         public System.Windows.Forms.Button btnEventos;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.ToolStripMenuItem menuNotificaciones;
+        private System.Windows.Forms.ToolStripMenuItem verPagisToolStripMenuItem;
+        public System.Windows.Forms.Label lblSaludo;
     }
 }
 

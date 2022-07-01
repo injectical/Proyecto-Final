@@ -1,0 +1,36 @@
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe.config
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.pdb
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\Version Administradores.csprojAssemblyReference.cache
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\Interop.ADODB.dll
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\Version Administradores.csproj.ResolveComReference.cache
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Eventos.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Login.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Principal.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Properties.Resources.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\Version Administradores.csproj.GenerateResource.cache
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\Version Administradores.csproj.CoreCompileInputs.cache
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.exe
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.pdb
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\bin\Debug\fr-BI\WindowsFormsApp10.resources.dll
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Principal.fr-BI.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\fr-BI\WindowsFormsApp10.resources.dll
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.GestionDeEventos.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\para cambios\Version_admins\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe.config
+C:\Users\bplim\Documents\Repositorio Proyecto\para cambios\Version_admins\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe
+C:\Users\bplim\Documents\Repositorio Proyecto\para cambios\Version_admins\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.pdb
+C:\Users\bplim\Documents\Repositorio Proyecto\para cambios\Version_admins\WindowsFormsApp10\bin\Debug\fr-BI\WindowsFormsApp10.resources.dll
+C:\Users\bplim\Documents\Repositorio Proyecto\para cambios\Version_admins\WindowsFormsApp10\obj\Debug\Version Administradores.csprojAssemblyReference.cache
+C:\Users\bplim\Documents\Repositorio Proyecto\para cambios\Version_admins\WindowsFormsApp10\obj\Debug\Interop.ADODB.dll
+C:\Users\bplim\Documents\Repositorio Proyecto\para cambios\Version_admins\WindowsFormsApp10\obj\Debug\Version Administradores.csproj.ResolveComReference.cache
+C:\Users\bplim\Documents\Repositorio Proyecto\para cambios\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Eventos.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\para cambios\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.GestionDeEventos.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\para cambios\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Login.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\para cambios\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Principal.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\para cambios\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Properties.Resources.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\para cambios\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Principal.fr-BI.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\para cambios\Version_admins\WindowsFormsApp10\obj\Debug\Version Administradores.csproj.GenerateResource.cache
+C:\Users\bplim\Documents\Repositorio Proyecto\para cambios\Version_admins\WindowsFormsApp10\obj\Debug\Version Administradores.csproj.CoreCompileInputs.cache
+C:\Users\bplim\Documents\Repositorio Proyecto\para cambios\Version_admins\WindowsFormsApp10\obj\Debug\fr-BI\WindowsFormsApp10.resources.dll
+C:\Users\bplim\Documents\Repositorio Proyecto\para cambios\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.exe
+C:\Users\bplim\Documents\Repositorio Proyecto\para cambios\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.pdb

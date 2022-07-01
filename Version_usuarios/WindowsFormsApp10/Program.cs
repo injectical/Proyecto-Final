@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ADODB;
 
 namespace WindowsFormsApp10
 {
-    static class Program
+  class Program
     {
 
         public static Principal frmPrincipal;
@@ -14,8 +15,8 @@ namespace WindowsFormsApp10
         public static Perfil frmPerfil;
         public static Eventos frmEventos;
         public static Registro frmRegistro;
+        public static Notificaciones frmNotificaciones;
         public static string nombreUsuario;
-
         //public static Clientes frmClientes;
 
         public static ADODB.Connection conexion = new ADODB.Connection();
@@ -29,10 +30,11 @@ namespace WindowsFormsApp10
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Principal());
         }
+       
+
 
         public static void doyPermisos(string usuario)
         {
-            byte rol = 0;
             object contFilas;
             frmPrincipal.btnEventos.Enabled = false;
             frmPrincipal.menuGestion.Enabled = false;
@@ -49,8 +51,8 @@ namespace WindowsFormsApp10
             }
             else
             {
-
-                sql = "select rol from usuarios where usuario ='" + usuario + "';";
+                //CAMBIAR DE ACUERDO AL CRITERIO QUE SE MANEJA EN LA TABLA DEL USUARIO
+                sql = "select nombre from usuario where email  ='" + usuario + "';";
 
                 try
                 {
@@ -58,23 +60,21 @@ namespace WindowsFormsApp10
                 }
                 catch
                 {
-                    MessageBox.Show("error al obtener rol de usuario");
+                    MessageBox.Show("error al obtener el nombre del usuario");
                     return;
 
                 }
 
                 if (rs.RecordCount > 0)
                 {
-                    rol = Convert.ToByte(rs.Fields[0].Value);//convierte lo que reciba a el tipo de dato byte, y lo asignamos a la variable rol
 
-                    //AVERIGUA SI LA SESIÓN ESTA ABIERTA Y CUÁL ES EL ROL DEL USUARIO
-                    if (rol == 2) {
-
+                    //AVERIGUA SI LA SESIÓN ESTA ABIERTA
+                    
                         frmPrincipal.btnEventos.Enabled = true;
                         frmPrincipal.menuGestion.Enabled = true;
                         frmPrincipal.menuLogout.Enabled = true;
 
-                    }
+                    
 
                     rs = null;
                     contFilas = null;
@@ -84,14 +84,22 @@ namespace WindowsFormsApp10
             }
         }
 
-        public static void cargarFormularioUsuario(string usuario)
+
+       
+
+
+       /* public static void cargarFormularioUsuario(string usuario)
         {
             string sqlNombre;
             string sqlApellido;
             string sqlEmail;
             string sqlMiembro;
+            ADODB.Recordset rs;
+            object contfilas;
             //SEGUN EL NOMBRE (NOMBRE DE USUARIO) TE TRAE LOS OTROS DATOS
             sqlNombre = "select Nombre from Usuarios where Nombre = '" + usuario + "';";
+            rs = conexion.Execute(sqlNombre, out contfilas);
+            sqlNombre = Convert.ToString(rs.Fields[0].Value);
             frmPerfil.txtNombre.Text = sqlNombre;
             sqlApellido = "select Apellido from Usuarios where Nombre = '" + usuario + "';";
             frmPerfil.txtApellido.Text = sqlApellido;
@@ -100,7 +108,7 @@ namespace WindowsFormsApp10
             sqlMiembro = "select Miembro from Usuarios where Nombre = '" + usuario + "';";
             frmPerfil.txtMiembro.Text = sqlMiembro;
         }
-        
+        */
         }
 
 }

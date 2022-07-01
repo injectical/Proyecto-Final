@@ -17,21 +17,15 @@ namespace WindowsFormsApp10
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
 
         private void Perfil_Load(object sender, EventArgs e)
         {
-            Program.cargarFormularioUsuario(Program.nombreUsuario);
+            //Program.cargarFormularioUsuario(Program.nombreUsuario);
       
         }
+
+       
     }
 }

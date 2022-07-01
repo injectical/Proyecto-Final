@@ -28,119 +28,133 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblPago = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtMiembro = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAplicar = new System.Windows.Forms.Button();
+            this.btnDescartar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(160, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(200, 89);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(79, 24);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Nombre";
             // 
-            // label2
+            // lblApellido
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(160, 135);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Apellido";
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(200, 186);
+            this.lblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(79, 24);
+            this.lblApellido.TabIndex = 1;
+            this.lblApellido.Text = "Apellido";
             // 
-            // label3
+            // lblPago
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(160, 283);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Miembro pago";
+            this.lblPago.AutoSize = true;
+            this.lblPago.Location = new System.Drawing.Point(200, 389);
+            this.lblPago.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPago.Name = "lblPago";
+            this.lblPago.Size = new System.Drawing.Size(133, 24);
+            this.lblPago.TabIndex = 2;
+            this.lblPago.Text = "Miembro pago";
             // 
-            // label4
+            // lblEmail
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(160, 206);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Email";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(200, 283);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(57, 24);
+            this.lblEmail.TabIndex = 3;
+            this.lblEmail.Text = "Email";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(299, 65);
+            this.txtNombre.Location = new System.Drawing.Point(374, 89);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(178, 22);
+            this.txtNombre.Size = new System.Drawing.Size(222, 28);
             this.txtNombre.TabIndex = 4;
             // 
             // txtMiembro
             // 
-            this.txtMiembro.Location = new System.Drawing.Point(299, 278);
+            this.txtMiembro.Location = new System.Drawing.Point(374, 382);
+            this.txtMiembro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMiembro.Name = "txtMiembro";
-            this.txtMiembro.Size = new System.Drawing.Size(178, 22);
+            this.txtMiembro.Size = new System.Drawing.Size(222, 28);
             this.txtMiembro.TabIndex = 5;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(299, 201);
+            this.txtEmail.Location = new System.Drawing.Point(374, 276);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(178, 22);
+            this.txtEmail.Size = new System.Drawing.Size(222, 28);
             this.txtEmail.TabIndex = 6;
-            this.txtEmail.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(299, 130);
+            this.txtApellido.Location = new System.Drawing.Point(374, 179);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(178, 22);
+            this.txtApellido.Size = new System.Drawing.Size(222, 28);
             this.txtApellido.TabIndex = 7;
             // 
-            // button1
+            // btnAplicar
             // 
-            this.button1.Location = new System.Drawing.Point(289, 363);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 24);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Aplicar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAplicar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAplicar.Location = new System.Drawing.Point(323, 500);
+            this.btnAplicar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAplicar.Name = "btnAplicar";
+            this.btnAplicar.Size = new System.Drawing.Size(105, 33);
+            this.btnAplicar.TabIndex = 8;
+            this.btnAplicar.Text = "Aplicar";
+            this.btnAplicar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnDescartar
             // 
-            this.button2.Location = new System.Drawing.Point(424, 363);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 24);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Descartar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDescartar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDescartar.Location = new System.Drawing.Point(530, 499);
+            this.btnDescartar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDescartar.Name = "btnDescartar";
+            this.btnDescartar.Size = new System.Drawing.Size(116, 33);
+            this.btnDescartar.TabIndex = 9;
+            this.btnDescartar.Text = "Descartar";
+            this.btnDescartar.UseVisualStyleBackColor = true;
             // 
             // Perfil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(1000, 619);
+            this.Controls.Add(this.btnDescartar);
+            this.Controls.Add(this.btnAplicar);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtMiembro);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblPago);
+            this.Controls.Add(this.lblApellido);
+            this.Controls.Add(this.lblNombre);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Perfil";
-            this.Text = "Perfil";
+            this.Text = "Ver/Modificar perfil";
             this.Load += new System.EventHandler(this.Perfil_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -149,12 +163,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.Label lblPago;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Button btnAplicar;
+        private System.Windows.Forms.Button btnDescartar;
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.TextBox txtMiembro;
         public System.Windows.Forms.TextBox txtEmail;
