@@ -86,7 +86,7 @@ namespace WindowsFormsApp10
 
 
        
-
+        //MÉTODO DE PRUEBA 
 
        /* public static void cargarFormularioUsuario(string usuario)
         {
