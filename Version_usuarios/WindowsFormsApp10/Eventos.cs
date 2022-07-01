@@ -24,7 +24,7 @@ namespace WindowsFormsApp10
             InitializeComponent();
         }
         
-       \\SE USAN A MODO DE EJEMPLO PARA MOSTRAR EN EL DATA GRID VIEW
+       //SE USAN A MODO DE EJEMPLO PARA MOSTRAR EN EL DATA GRID VIEW
         private List<Evento> GetFutbol()
         {
             var listaFutbol = new List<Evento>();
@@ -116,8 +116,8 @@ namespace WindowsFormsApp10
 
         }
 
-        \\METODO DE PRUEBA
-        \* 
+        //METODO DE PRUEBA
+        /* 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
 
@@ -135,6 +135,6 @@ namespace WindowsFormsApp10
                     }
             }
 
-    }*\
+    }*/
 }
 }
