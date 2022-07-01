@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp10
 {
-    public partial class Uruguay : Form
+    public partial class GestionDeEventos : Form
     {
-        public Uruguay()
+        public GestionDeEventos()
         {
             InitializeComponent();
+        }
+
+        private void chkConfirmacionDeFinal_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -12,7 +12,7 @@ namespace WindowsFormsApp10
         public static Principal frmPrincipal;
         public static Login frmLogin;
         public static Eventos frmEventos;
-        public static Uruguay frmUruguay;
+        public static GestionDeEventos frmgestionEventos;
 
         //public static Clientes frmClientes;
 
@@ -25,7 +25,7 @@ namespace WindowsFormsApp10
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Principal());
+            Application.Run(frmPrincipal=new Principal());
         }
 
         public static void doyPermisos(string usuario)
@@ -34,8 +34,7 @@ namespace WindowsFormsApp10
             object contFilas;
             frmPrincipal.menuEventos.Enabled = false;
             frmPrincipal.menuGestionUsuarios.Enabled = false;
-            frmPrincipal.pbLogin.Enabled = false;
-            frmPrincipal.lnkEventos.Enabled = false;
+         
           
             string sql; //
             ADODB.Recordset rs; //objeto clase recordset
@@ -49,7 +48,7 @@ namespace WindowsFormsApp10
             else
             {
 
-                sql = "select rol from administradores where usuario ='" + usuario + "';";
+                sql = "select rol from parametros where usuario ='" + usuario + "';";
 
                 try
                 {
@@ -71,8 +70,9 @@ namespace WindowsFormsApp10
                     
                        
                             frmPrincipal.menuEventos.Enabled = true;
-                            frmPrincipal.menuGestionUsuarios.Enabled = true;
-                            frmPrincipal.lnkEventos.Enabled = true;
+                            frmPrincipal.menuLogin.Enabled = true;
+                            //frmPrincipal.pcbImagen.Visible = true;
+
                           
 
                     }

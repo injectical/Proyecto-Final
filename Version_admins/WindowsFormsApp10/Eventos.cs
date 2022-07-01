@@ -56,11 +56,5 @@ namespace WindowsFormsApp10
         {
 
         }
-
-        private void lnkUruguay_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Program.frmUruguay = new Uruguay();
-            Program.frmUruguay.Show();
-        }
     }
 }

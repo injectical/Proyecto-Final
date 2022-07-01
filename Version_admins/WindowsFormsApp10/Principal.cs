@@ -19,18 +19,21 @@ namespace WindowsFormsApp10
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+           
             Program.frmLogin = new Login();
-            //Program.frmLogin.MdiParent = this;
+            Program.frmLogin.MdiParent = this;
             Program.frmLogin.Show();
+
         }
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            menuEventos.Enabled = true;
-            menuGestionUsuarios.Enabled = true;
-            menuLogin.Enabled = true;
-            lnkEventos.Enabled = true;
+            menuEventos.Enabled = false;
+            menuGestionUsuarios.Enabled = false;
+           // Program.frmPrincipal.pcbImagen.Visible = false;
+
+
+
 
 
         }
@@ -54,8 +57,24 @@ namespace WindowsFormsApp10
 
         private void lnkEventos_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Program.frmEventos = new Eventos();
-            Program.frmEventos.Show();
+           
+        }
+
+        private void menuEventos_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.frmgestionEventos = new GestionDeEventos();
+            Program.frmgestionEventos.MdiParent = this;
+            Program.frmgestionEventos.Show();
         }
     }
 }
