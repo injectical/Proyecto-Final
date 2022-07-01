@@ -17,11 +17,10 @@ namespace WindowsFormsApp10
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pbLogin_Click(object sender, EventArgs e)
         {
 
             Program.frmLogin = new Login();
-            //Program.frmLogin.MdiParent = this;
             Program.frmLogin.Show();
         }
 
@@ -31,15 +30,13 @@ namespace WindowsFormsApp10
             btnEventos.Enabled = true;
             menuGestion.Enabled = true;
             menuLogout.Enabled = true;
+            lblSaludo.Text = "Bienvenido" + Program.nombreUsuario;
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void menuLogin_Click(object sender, EventArgs e)
+        private void menuLogout_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -47,26 +44,17 @@ namespace WindowsFormsApp10
         private void modificarPerfilToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Program.frmPerfil = new Perfil();
-            //Program.frmPerfil.MdiParent = this;
             Program.frmPerfil.Show();
             
         }
 
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void btnEventos_Click(object sender, EventArgs e)
         {
             
             Program.frmEventos = new Eventos();
             Program.frmEventos.Show();
-        }
-
-        private void menuNotificaciones_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void menuNotificaciones_Click_1(object sender, EventArgs e)

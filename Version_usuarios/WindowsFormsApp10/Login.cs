@@ -38,22 +38,24 @@ namespace WindowsFormsApp10
             }
             Program.conexion.CursorLocation = ADODB.CursorLocationEnum.adUseClient;
             Program.doyPermisos(txtNombre.Text);
-            Program.nombreUsuario = txtNombre.Text;//CARGA EN UNA VARIABLE PUBLICA EL NOMBRE DE USUARIO
+            Program.nombreUsuario = txtNombre.Text;//CARGA EN UNA VARIABLE GLOBAL EL NOMBRE DE USUARIO
             this.Close();
             
             
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void lnkRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
             Program.frmRegistro = new Registro();
             Program.frmRegistro.Show();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -17,10 +17,7 @@ namespace WindowsFormsApp10
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void lnkVolver_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -28,5 +25,7 @@ namespace WindowsFormsApp10
             Program.frmLogin = new Login();
             Program.frmLogin.Show();
         }
+
+        
     }
 }
