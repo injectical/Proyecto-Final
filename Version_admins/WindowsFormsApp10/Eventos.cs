@@ -12,49 +12,48 @@ namespace WindowsFormsApp10
 {
     public partial class Eventos : Form
     {
+        public static VistaEventos frmVistaEventos;
+
+        public List<Evento> Uruguay { get; set; }
+        public List<Evento> Argentina { get; set; }
         public Eventos()
         {
+            Uruguay = VistaEventos.GetUruguay();
+            Argentina = VistaEventos.GetArgentina();
             InitializeComponent();
         }
 
-        private void linkLabel15_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
 
-        }
 
-        private void linkLabel16_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void linkLabel17_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void linkLabel19_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void linkLabel20_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void linkLabel21_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
+        //LOS ESTILOS VISUALES DE LAS VENTANAS SE IRAN PULIENDO, SE MUESTRA UN DISEÑO TENTATIVO
 
         private void Eventos_Load(object sender, EventArgs e)
         {
 
         }
+        //DE ESTA FORMA, CUANDO SE CLICKEA EN UN LINK SE FILTRAN LOS RESULTADOS
 
-        private void groupBox2_Enter(object sender, EventArgs e)
+        
+        private void lnkUruguay_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+            var elementos = this.Uruguay;
+            frmVistaEventos = new VistaEventos();
+            frmVistaEventos.Show();
+            frmVistaEventos.dgvResultados.DataSource = elementos;
+
+        }
+
+        private void lnkArgentina_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var elementos = this.Argentina;
+            frmVistaEventos = new VistaEventos();
+            frmVistaEventos.Show();
+            frmVistaEventos.dgvResultados.DataSource = elementos;
+        }
+
+        private void lnkFutbol_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
         }
     }
 }

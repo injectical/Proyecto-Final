@@ -17,6 +17,8 @@ namespace WindowsFormsApp10
             InitializeComponent();
         }
 
+
+        //LOS ESTILOS VISUALES DE LAS VENTANAS SE IRAN PULIENDO, SE MUESTRA UN DISEÑO TENTATIVO
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -39,9 +41,5 @@ namespace WindowsFormsApp10
             this.Close();
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-    }
+          }
 }

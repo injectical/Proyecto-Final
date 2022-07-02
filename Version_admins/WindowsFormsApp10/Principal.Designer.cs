@@ -104,6 +104,7 @@
             // 
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
             resources.ApplyResources(this.verToolStripMenuItem, "verToolStripMenuItem");
+            this.verToolStripMenuItem.Click += new System.EventHandler(this.verToolStripMenuItem_Click);
             // 
             // Principal
             // 

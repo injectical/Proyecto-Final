@@ -46,11 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Evento.cs" />
     <Compile Include="Eventos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Eventos.Designer.cs">
       <DependentUpon>Eventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaEventos.Designer.cs">
+      <DependentUpon>VistaEventos.cs</DependentUpon>
     </Compile>
     <Compile Include="GestionDeEventos.cs">
       <SubType>Form</SubType>
@@ -74,6 +81,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Eventos.resx">
       <DependentUpon>Eventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaEventos.resx">
+      <DependentUpon>VistaEventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionDeEventos.resx">
       <DependentUpon>GestionDeEventos.cs</DependentUpon>

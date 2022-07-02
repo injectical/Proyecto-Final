@@ -27,10 +27,9 @@ namespace WindowsFormsApp10
         public void Principal_Load(object sender, EventArgs e)
         {
 
-            btnEventos.Enabled = true;
-            menuGestion.Enabled = true;
-            menuLogout.Enabled = true;
-            lblSaludo.Text = "Bienvenido" + Program.nombreUsuario;
+            btnEventos.Enabled = false;
+            menuGestion.Enabled = false;
+            menuLogout.Enabled = false;
 
         }
 

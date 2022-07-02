@@ -17,6 +17,7 @@ namespace WindowsFormsApp10
         public static Registro frmRegistro;
         public static Notificaciones frmNotificaciones;
         public static string nombreUsuario;
+       
         //public static Clientes frmClientes;
 
         public static ADODB.Connection conexion = new ADODB.Connection();
@@ -73,8 +74,9 @@ namespace WindowsFormsApp10
                         frmPrincipal.btnEventos.Enabled = true;
                         frmPrincipal.menuGestion.Enabled = true;
                         frmPrincipal.menuLogout.Enabled = true;
+                        frmPrincipal.lblSaludo.Text = "Bienvenido" + Program.nombreUsuario;
 
-                    
+
 
                     rs = null;
                     contFilas = null;

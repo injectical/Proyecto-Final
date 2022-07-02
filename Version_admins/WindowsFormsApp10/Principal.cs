@@ -16,7 +16,7 @@ namespace WindowsFormsApp10
         {
             InitializeComponent();
         }
-
+        //LOS ESTILOS VISUALES DE LAS VENTANAS SE IRAN PULIENDO, SE MUESTRA UN DISEÑO TENTATIVO
         private void pictureBox1_Click(object sender, EventArgs e)
         {
            
@@ -31,10 +31,6 @@ namespace WindowsFormsApp10
             menuEventos.Enabled = false;
             menuGestionUsuarios.Enabled = false;
            // Program.frmPrincipal.pcbImagen.Visible = false;
-
-
-
-
 
         }
 
@@ -75,6 +71,12 @@ namespace WindowsFormsApp10
             Program.frmgestionEventos = new GestionDeEventos();
             Program.frmgestionEventos.MdiParent = this;
             Program.frmgestionEventos.Show();
+        }
+
+        private void verToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.frmEventos = new Eventos();
+            Program.frmEventos.Show();
         }
     }
 }

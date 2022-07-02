@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.lnkUruguay = new System.Windows.Forms.LinkLabel();
+            this.lnkArgentina = new System.Windows.Forms.LinkLabel();
+            this.lnkBrasil = new System.Windows.Forms.LinkLabel();
+            this.lnkEspaña = new System.Windows.Forms.LinkLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel6 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
+            this.lnkMexico = new System.Windows.Forms.LinkLabel();
+            this.lnkInglaterra = new System.Windows.Forms.LinkLabel();
+            this.lnkEEUU = new System.Windows.Forms.LinkLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.linkLabel8 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel9 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel10 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel11 = new System.Windows.Forms.LinkLabel();
+            this.lnkAutomovilismo = new System.Windows.Forms.LinkLabel();
+            this.lnkRugby = new System.Windows.Forms.LinkLabel();
+            this.lnkFutbol = new System.Windows.Forms.LinkLabel();
             this.linkLabel12 = new System.Windows.Forms.LinkLabel();
             this.linkLabel13 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel14 = new System.Windows.Forms.LinkLabel();
+            this.lnkBasquetbol = new System.Windows.Forms.LinkLabel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.linkLabel28 = new System.Windows.Forms.LinkLabel();
             this.linkLabel26 = new System.Windows.Forms.LinkLabel();
@@ -64,68 +64,70 @@
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // linkLabel1
+            // lnkUruguay
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F);
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(25, 44);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(73, 22);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Uruguay";
+            this.lnkUruguay.AutoSize = true;
+            this.lnkUruguay.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F);
+            this.lnkUruguay.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkUruguay.LinkColor = System.Drawing.Color.Black;
+            this.lnkUruguay.Location = new System.Drawing.Point(25, 44);
+            this.lnkUruguay.Name = "lnkUruguay";
+            this.lnkUruguay.Size = new System.Drawing.Size(73, 22);
+            this.lnkUruguay.TabIndex = 0;
+            this.lnkUruguay.TabStop = true;
+            this.lnkUruguay.Text = "Uruguay";
+            this.lnkUruguay.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkUruguay_LinkClicked);
             // 
-            // linkLabel2
+            // lnkArgentina
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F);
-            this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel2.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel2.Location = new System.Drawing.Point(25, 88);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(83, 22);
-            this.linkLabel2.TabIndex = 1;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Argentina";
+            this.lnkArgentina.AutoSize = true;
+            this.lnkArgentina.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F);
+            this.lnkArgentina.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkArgentina.LinkColor = System.Drawing.Color.Black;
+            this.lnkArgentina.Location = new System.Drawing.Point(25, 88);
+            this.lnkArgentina.Name = "lnkArgentina";
+            this.lnkArgentina.Size = new System.Drawing.Size(83, 22);
+            this.lnkArgentina.TabIndex = 1;
+            this.lnkArgentina.TabStop = true;
+            this.lnkArgentina.Text = "Argentina";
+            this.lnkArgentina.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkArgentina_LinkClicked);
             // 
-            // linkLabel3
+            // lnkBrasil
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F);
-            this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel3.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel3.Location = new System.Drawing.Point(25, 135);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(46, 22);
-            this.linkLabel3.TabIndex = 2;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Brasil";
+            this.lnkBrasil.AutoSize = true;
+            this.lnkBrasil.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F);
+            this.lnkBrasil.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkBrasil.LinkColor = System.Drawing.Color.Black;
+            this.lnkBrasil.Location = new System.Drawing.Point(25, 135);
+            this.lnkBrasil.Name = "lnkBrasil";
+            this.lnkBrasil.Size = new System.Drawing.Size(46, 22);
+            this.lnkBrasil.TabIndex = 2;
+            this.lnkBrasil.TabStop = true;
+            this.lnkBrasil.Text = "Brasil";
             // 
-            // linkLabel4
+            // lnkEspaña
             // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F);
-            this.linkLabel4.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel4.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel4.Location = new System.Drawing.Point(26, 232);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(58, 22);
-            this.linkLabel4.TabIndex = 3;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "España";
+            this.lnkEspaña.AutoSize = true;
+            this.lnkEspaña.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F);
+            this.lnkEspaña.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkEspaña.LinkColor = System.Drawing.Color.Black;
+            this.lnkEspaña.Location = new System.Drawing.Point(26, 232);
+            this.lnkEspaña.Name = "lnkEspaña";
+            this.lnkEspaña.Size = new System.Drawing.Size(58, 22);
+            this.lnkEspaña.TabIndex = 3;
+            this.lnkEspaña.TabStop = true;
+            this.lnkEspaña.Text = "España";
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.groupBox1.Controls.Add(this.linkLabel7);
-            this.groupBox1.Controls.Add(this.linkLabel6);
-            this.groupBox1.Controls.Add(this.linkLabel5);
-            this.groupBox1.Controls.Add(this.linkLabel1);
-            this.groupBox1.Controls.Add(this.linkLabel4);
-            this.groupBox1.Controls.Add(this.linkLabel2);
-            this.groupBox1.Controls.Add(this.linkLabel3);
+            this.groupBox1.Controls.Add(this.lnkMexico);
+            this.groupBox1.Controls.Add(this.lnkInglaterra);
+            this.groupBox1.Controls.Add(this.lnkEEUU);
+            this.groupBox1.Controls.Add(this.lnkUruguay);
+            this.groupBox1.Controls.Add(this.lnkEspaña);
+            this.groupBox1.Controls.Add(this.lnkArgentina);
+            this.groupBox1.Controls.Add(this.lnkBrasil);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(40, 34);
             this.groupBox1.Name = "groupBox1";
@@ -134,55 +136,55 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Eventos por país";
             // 
-            // linkLabel7
+            // lnkMexico
             // 
-            this.linkLabel7.AutoSize = true;
-            this.linkLabel7.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F);
-            this.linkLabel7.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel7.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel7.Location = new System.Drawing.Point(25, 184);
-            this.linkLabel7.Name = "linkLabel7";
-            this.linkLabel7.Size = new System.Drawing.Size(62, 22);
-            this.linkLabel7.TabIndex = 6;
-            this.linkLabel7.TabStop = true;
-            this.linkLabel7.Text = "México";
+            this.lnkMexico.AutoSize = true;
+            this.lnkMexico.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F);
+            this.lnkMexico.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkMexico.LinkColor = System.Drawing.Color.Black;
+            this.lnkMexico.Location = new System.Drawing.Point(25, 184);
+            this.lnkMexico.Name = "lnkMexico";
+            this.lnkMexico.Size = new System.Drawing.Size(62, 22);
+            this.lnkMexico.TabIndex = 6;
+            this.lnkMexico.TabStop = true;
+            this.lnkMexico.Text = "México";
             // 
-            // linkLabel6
+            // lnkInglaterra
             // 
-            this.linkLabel6.AutoSize = true;
-            this.linkLabel6.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F);
-            this.linkLabel6.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel6.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel6.Location = new System.Drawing.Point(26, 320);
-            this.linkLabel6.Name = "linkLabel6";
-            this.linkLabel6.Size = new System.Drawing.Size(78, 22);
-            this.linkLabel6.TabIndex = 5;
-            this.linkLabel6.TabStop = true;
-            this.linkLabel6.Text = "Inglaterra";
+            this.lnkInglaterra.AutoSize = true;
+            this.lnkInglaterra.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F);
+            this.lnkInglaterra.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkInglaterra.LinkColor = System.Drawing.Color.Black;
+            this.lnkInglaterra.Location = new System.Drawing.Point(26, 320);
+            this.lnkInglaterra.Name = "lnkInglaterra";
+            this.lnkInglaterra.Size = new System.Drawing.Size(78, 22);
+            this.lnkInglaterra.TabIndex = 5;
+            this.lnkInglaterra.TabStop = true;
+            this.lnkInglaterra.Text = "Inglaterra";
             // 
-            // linkLabel5
+            // lnkEEUU
             // 
-            this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F);
-            this.linkLabel5.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel5.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel5.Location = new System.Drawing.Point(27, 274);
-            this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(52, 22);
-            this.linkLabel5.TabIndex = 4;
-            this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "EEUU";
+            this.lnkEEUU.AutoSize = true;
+            this.lnkEEUU.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F);
+            this.lnkEEUU.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkEEUU.LinkColor = System.Drawing.Color.Black;
+            this.lnkEEUU.Location = new System.Drawing.Point(27, 274);
+            this.lnkEEUU.Name = "lnkEEUU";
+            this.lnkEEUU.Size = new System.Drawing.Size(52, 22);
+            this.lnkEEUU.TabIndex = 4;
+            this.lnkEEUU.TabStop = true;
+            this.lnkEEUU.Text = "EEUU";
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Olive;
             this.groupBox2.Controls.Add(this.linkLabel8);
-            this.groupBox2.Controls.Add(this.linkLabel9);
-            this.groupBox2.Controls.Add(this.linkLabel10);
-            this.groupBox2.Controls.Add(this.linkLabel11);
+            this.groupBox2.Controls.Add(this.lnkAutomovilismo);
+            this.groupBox2.Controls.Add(this.lnkRugby);
+            this.groupBox2.Controls.Add(this.lnkFutbol);
             this.groupBox2.Controls.Add(this.linkLabel12);
             this.groupBox2.Controls.Add(this.linkLabel13);
-            this.groupBox2.Controls.Add(this.linkLabel14);
+            this.groupBox2.Controls.Add(this.lnkBasquetbol);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(319, 34);
             this.groupBox2.Name = "groupBox2";
@@ -190,7 +192,6 @@
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Eventos por categoría";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // linkLabel8
             // 
@@ -205,44 +206,45 @@
             this.linkLabel8.TabStop = true;
             this.linkLabel8.Text = "Boxeo";
             // 
-            // linkLabel9
+            // lnkAutomovilismo
             // 
-            this.linkLabel9.AutoSize = true;
-            this.linkLabel9.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel9.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel9.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel9.Location = new System.Drawing.Point(26, 320);
-            this.linkLabel9.Name = "linkLabel9";
-            this.linkLabel9.Size = new System.Drawing.Size(125, 22);
-            this.linkLabel9.TabIndex = 5;
-            this.linkLabel9.TabStop = true;
-            this.linkLabel9.Text = "Automovilismo";
+            this.lnkAutomovilismo.AutoSize = true;
+            this.lnkAutomovilismo.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkAutomovilismo.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkAutomovilismo.LinkColor = System.Drawing.Color.Black;
+            this.lnkAutomovilismo.Location = new System.Drawing.Point(26, 320);
+            this.lnkAutomovilismo.Name = "lnkAutomovilismo";
+            this.lnkAutomovilismo.Size = new System.Drawing.Size(125, 22);
+            this.lnkAutomovilismo.TabIndex = 5;
+            this.lnkAutomovilismo.TabStop = true;
+            this.lnkAutomovilismo.Text = "Automovilismo";
             // 
-            // linkLabel10
+            // lnkRugby
             // 
-            this.linkLabel10.AutoSize = true;
-            this.linkLabel10.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel10.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel10.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel10.Location = new System.Drawing.Point(27, 274);
-            this.linkLabel10.Name = "linkLabel10";
-            this.linkLabel10.Size = new System.Drawing.Size(57, 22);
-            this.linkLabel10.TabIndex = 4;
-            this.linkLabel10.TabStop = true;
-            this.linkLabel10.Text = "Rugby";
+            this.lnkRugby.AutoSize = true;
+            this.lnkRugby.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkRugby.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkRugby.LinkColor = System.Drawing.Color.Black;
+            this.lnkRugby.Location = new System.Drawing.Point(27, 274);
+            this.lnkRugby.Name = "lnkRugby";
+            this.lnkRugby.Size = new System.Drawing.Size(57, 22);
+            this.lnkRugby.TabIndex = 4;
+            this.lnkRugby.TabStop = true;
+            this.lnkRugby.Text = "Rugby";
             // 
-            // linkLabel11
+            // lnkFutbol
             // 
-            this.linkLabel11.AutoSize = true;
-            this.linkLabel11.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel11.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel11.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel11.Location = new System.Drawing.Point(25, 44);
-            this.linkLabel11.Name = "linkLabel11";
-            this.linkLabel11.Size = new System.Drawing.Size(58, 22);
-            this.linkLabel11.TabIndex = 0;
-            this.linkLabel11.TabStop = true;
-            this.linkLabel11.Text = "Futbol";
+            this.lnkFutbol.AutoSize = true;
+            this.lnkFutbol.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkFutbol.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkFutbol.LinkColor = System.Drawing.Color.Black;
+            this.lnkFutbol.Location = new System.Drawing.Point(25, 44);
+            this.lnkFutbol.Name = "lnkFutbol";
+            this.lnkFutbol.Size = new System.Drawing.Size(58, 22);
+            this.lnkFutbol.TabIndex = 0;
+            this.lnkFutbol.TabStop = true;
+            this.lnkFutbol.Text = "Futbol";
+            this.lnkFutbol.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkFutbol_LinkClicked);
             // 
             // linkLabel12
             // 
@@ -270,18 +272,18 @@
             this.linkLabel13.TabStop = true;
             this.linkLabel13.Text = "Tenis";
             // 
-            // linkLabel14
+            // lnkBasquetbol
             // 
-            this.linkLabel14.AutoSize = true;
-            this.linkLabel14.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel14.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel14.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel14.Location = new System.Drawing.Point(25, 135);
-            this.linkLabel14.Name = "linkLabel14";
-            this.linkLabel14.Size = new System.Drawing.Size(88, 22);
-            this.linkLabel14.TabIndex = 2;
-            this.linkLabel14.TabStop = true;
-            this.linkLabel14.Text = "Básquetbol";
+            this.lnkBasquetbol.AutoSize = true;
+            this.lnkBasquetbol.Font = new System.Drawing.Font("Tempus Sans ITC", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkBasquetbol.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkBasquetbol.LinkColor = System.Drawing.Color.Black;
+            this.lnkBasquetbol.Location = new System.Drawing.Point(25, 135);
+            this.lnkBasquetbol.Name = "lnkBasquetbol";
+            this.lnkBasquetbol.Size = new System.Drawing.Size(88, 22);
+            this.lnkBasquetbol.TabIndex = 2;
+            this.lnkBasquetbol.TabStop = true;
+            this.lnkBasquetbol.Text = "Básquetbol";
             // 
             // groupBox3
             // 
@@ -411,7 +413,6 @@
             this.linkLabel15.TabIndex = 6;
             this.linkLabel15.TabStop = true;
             this.linkLabel15.Text = "Estadual do Brasil";
-            this.linkLabel15.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel15_LinkClicked);
             // 
             // linkLabel16
             // 
@@ -425,7 +426,6 @@
             this.linkLabel16.TabIndex = 5;
             this.linkLabel16.TabStop = true;
             this.linkLabel16.Text = "La Liga";
-            this.linkLabel16.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel16_LinkClicked);
             // 
             // linkLabel17
             // 
@@ -439,7 +439,6 @@
             this.linkLabel17.TabIndex = 4;
             this.linkLabel17.TabStop = true;
             this.linkLabel17.Text = "Seven Nations";
-            this.linkLabel17.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel17_LinkClicked);
             // 
             // linkLabel18
             // 
@@ -466,7 +465,6 @@
             this.linkLabel19.TabIndex = 3;
             this.linkLabel19.TabStop = true;
             this.linkLabel19.Text = "Premier League";
-            this.linkLabel19.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel19_LinkClicked);
             // 
             // linkLabel20
             // 
@@ -480,7 +478,6 @@
             this.linkLabel20.TabIndex = 1;
             this.linkLabel20.TabStop = true;
             this.linkLabel20.Text = "Campeonato Argentino";
-            this.linkLabel20.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel20_LinkClicked);
             // 
             // linkLabel21
             // 
@@ -494,7 +491,6 @@
             this.linkLabel21.TabIndex = 2;
             this.linkLabel21.TabStop = true;
             this.linkLabel21.Text = "Brasileirao";
-            this.linkLabel21.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel21_LinkClicked);
             // 
             // Eventos
             // 
@@ -520,22 +516,22 @@
 
         #endregion
 
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.LinkLabel lnkUruguay;
+        private System.Windows.Forms.LinkLabel lnkArgentina;
+        private System.Windows.Forms.LinkLabel lnkBrasil;
+        private System.Windows.Forms.LinkLabel lnkEspaña;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.LinkLabel linkLabel7;
-        private System.Windows.Forms.LinkLabel linkLabel6;
-        private System.Windows.Forms.LinkLabel linkLabel5;
+        private System.Windows.Forms.LinkLabel lnkMexico;
+        private System.Windows.Forms.LinkLabel lnkInglaterra;
+        private System.Windows.Forms.LinkLabel lnkEEUU;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.LinkLabel linkLabel8;
-        private System.Windows.Forms.LinkLabel linkLabel9;
-        private System.Windows.Forms.LinkLabel linkLabel10;
-        private System.Windows.Forms.LinkLabel linkLabel11;
+        private System.Windows.Forms.LinkLabel lnkAutomovilismo;
+        private System.Windows.Forms.LinkLabel lnkRugby;
+        private System.Windows.Forms.LinkLabel lnkFutbol;
         private System.Windows.Forms.LinkLabel linkLabel12;
         private System.Windows.Forms.LinkLabel linkLabel13;
-        private System.Windows.Forms.LinkLabel linkLabel14;
+        private System.Windows.Forms.LinkLabel lnkBasquetbol;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.LinkLabel linkLabel15;
         private System.Windows.Forms.LinkLabel linkLabel16;

@@ -30,7 +30,6 @@ namespace WindowsFormsApp10
 
         public static void doyPermisos(string usuario)
         {
-            byte rol = 0;
             object contFilas;
             frmPrincipal.menuEventos.Enabled = false;
             frmPrincipal.menuGestionUsuarios.Enabled = false;
@@ -38,9 +37,7 @@ namespace WindowsFormsApp10
           
             string sql; //
             ADODB.Recordset rs; //objeto clase recordset
-                                //frmPrincipal.menuAplicaciones.Enabled = false;
-                                //frmPrincipal.menuClientes.Enabled = false;
-
+                            
             if (conexion.State == 0)
             {
                 frmPrincipal.pbLogin.Enabled = true;
@@ -63,15 +60,12 @@ namespace WindowsFormsApp10
 
                 if (rs.RecordCount > 0)
                 {
-                    rol = Convert.ToByte(rs.Fields[0].Value);//convierte lo que reciba a el tipo de dato byte, y lo asignamos a la variable rol
 
                     //AVERIGUA SI LA SESIÓN ESTA ABIERTA Y CUÁL ES EL ROL DEL USUARIO
-                    if (rol == 1) { 
                     
                        
                             frmPrincipal.menuEventos.Enabled = true;
                             frmPrincipal.menuLogin.Enabled = true;
-                            //frmPrincipal.pcbImagen.Visible = true;
 
                           
 
@@ -85,4 +79,3 @@ namespace WindowsFormsApp10
             }
         }
     }
-}
