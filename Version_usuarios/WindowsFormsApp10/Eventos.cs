@@ -24,7 +24,7 @@ namespace WindowsFormsApp10
             InitializeComponent();
         }
         
-
+       //SE USAN A MODO DE EJEMPLO PARA MOSTRAR EN EL DATA GRID VIEW
         private List<Evento> GetFutbol()
         {
             var listaFutbol = new List<Evento>();
@@ -116,10 +116,12 @@ namespace WindowsFormsApp10
 
         }
 
+        //METODO DE PRUEBA
+        /* 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
 
-            SqlConnection conexion = new SqlConnection("server=DIEGO-PC ; database=base1 ; integrated security = true");//ESTA ULTIMA PARTE DEBERIA SER CAMBIADA POR LOS VALORES DE LA MAQUINA PROPIA
+            SqlConnection conexion = new SqlConnection()
                 conexion.Open();
             if (txtPais != null)
             {
@@ -132,6 +134,7 @@ namespace WindowsFormsApp10
                     dataGridDeportes.DataSource = registro;
                     }
             }
-    }
+
+    }*/
 }
 }
