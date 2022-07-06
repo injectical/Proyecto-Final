@@ -23,6 +23,7 @@ namespace WindowsFormsApp10
             Program.frmLogin = new Login();
             Program.frmLogin.MdiParent = this;
             Program.frmLogin.Show();
+            
 
         }
 
@@ -75,6 +76,13 @@ namespace WindowsFormsApp10
             Program.frmgestionEventos = new GestionDeEventos();
             Program.frmgestionEventos.MdiParent = this;
             Program.frmgestionEventos.Show();
+        }
+
+        private void menuGestionUsuarios_Click(object sender, EventArgs e)
+        {
+            Program.frmgestiondeusuarios = new GestionDeUsuarios();
+            Program.frmgestiondeusuarios.MdiParent = this;
+            Program.frmgestiondeusuarios.Show();
         }
     }
 }

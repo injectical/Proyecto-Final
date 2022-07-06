@@ -21,5 +21,47 @@ namespace WindowsFormsApp10
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgrgar_Click(object sender, EventArgs e)
+
+        {
+            object contFilas;
+            Program.conexion.Execute("use sport360", out contFilas);
+            string nombre = txtnombre.Text;
+            string pais = txtPais.Text;
+            string fecha = txtFecha.Text;
+            string horaDeInicio = txthoraInicio.Text;
+            string resultado = txtresultado.Text;
+           
+            string sql = "insert into evento (nombre,pais,fecha,hora,resultado) values ( '" +nombre+ "','" + pais + "','" + fecha + "','" + horaDeInicio + "','" + resultado + "');";
+                                          
+          
+
+
+            try
+            {
+                Program.conexion.Execute(sql, out contFilas);
+            }
+            catch
+            {
+                MessageBox.Show("Los datos no fueron ingresados correctamente ");
+                return;
+            }
+
+            txtresultado.Clear();
+            txtPais.Clear();
+            txtnombre.Clear();
+            txtFecha.Clear();
+            txthoraInicio.Clear();
+
+        }
+
+
+
     }
 }

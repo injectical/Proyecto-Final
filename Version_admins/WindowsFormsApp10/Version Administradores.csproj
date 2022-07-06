@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>WindowsFormsApp10</RootNamespace>
     <AssemblyName>WindowsFormsApp10</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x64</PlatformTarget>
@@ -32,7 +33,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="StreamJsonRpc, Version=1.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,11 +53,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassEvento.cs" />
     <Compile Include="Eventos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Eventos.Designer.cs">
       <DependentUpon>Eventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionDeUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionDeUsuarios.Designer.cs">
+      <DependentUpon>GestionDeUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="GestionDeEventos.cs">
       <SubType>Form</SubType>
@@ -75,6 +89,9 @@
     <EmbeddedResource Include="Eventos.resx">
       <DependentUpon>Eventos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GestionDeUsuarios.resx">
+      <DependentUpon>GestionDeUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestionDeEventos.resx">
       <DependentUpon>GestionDeEventos.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +114,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

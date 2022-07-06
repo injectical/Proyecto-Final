@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.OleDb;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +15,8 @@ namespace WindowsFormsApp10
         public static Login frmLogin;
         public static Eventos frmEventos;
         public static GestionDeEventos frmgestionEventos;
+        public static GestionDeUsuarios frmgestiondeusuarios;
+
 
         //public static Clientes frmClientes;
 
@@ -25,7 +29,7 @@ namespace WindowsFormsApp10
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(frmPrincipal=new Principal());
+            Application.Run(frmPrincipal = new Principal());
         }
 
         public static void doyPermisos(string usuario)
@@ -36,10 +40,9 @@ namespace WindowsFormsApp10
             frmPrincipal.menuGestionUsuarios.Enabled = false;
          
           
-            string sql; //
+            string sql; 
             ADODB.Recordset rs; //objeto clase recordset
-                                //frmPrincipal.menuAplicaciones.Enabled = false;
-                                //frmPrincipal.menuClientes.Enabled = false;
+                                
 
             if (conexion.State == 0)
             {
@@ -48,7 +51,7 @@ namespace WindowsFormsApp10
             else
             {
 
-                sql = "select rol from parametros where usuario ='" + usuario + "';";
+                sql = "select USUARIO.rol from USUARIO where NOMBRE= '"+usuario+"';";
 
                 try
                 {
@@ -71,10 +74,17 @@ namespace WindowsFormsApp10
                        
                             frmPrincipal.menuEventos.Enabled = true;
                             frmPrincipal.menuLogin.Enabled = true;
+                      
                             //frmPrincipal.pcbImagen.Visible = true;
 
-                          
 
+
+                    }
+
+                    if (rol == 2) {
+                        frmPrincipal.menuEventos.Enabled = true;
+                        frmPrincipal.menuLogin.Enabled = true;
+                        frmPrincipal.menuGestionUsuarios.Enabled = true;
                     }
 
                     rs = null;
@@ -83,6 +93,21 @@ namespace WindowsFormsApp10
                 }
             
             }
+        }
+        //recibe una una consulta sql y la respuesta la adata a una tabla del tipo DateTable
+        //para mostrar por pantalla hay que cargar el return de este metodo a una data gridview
+        // de la sigiente manera dataGridView1.DataSource=dt;
+        public static DataTable listarUsuarios(string sql) {
+
+          object contFilas;
+
+            ADODB.Recordset rs;
+            rs = Program.conexion.Execute(sql, out contFilas);
+            DataTable dt = new DataTable();
+            OleDbDataAdapter adapter = new System.Data.OleDb.OleDbDataAdapter();
+            adapter.Fill(dt, rs);
+            return dt;
+           
         }
     }
 }

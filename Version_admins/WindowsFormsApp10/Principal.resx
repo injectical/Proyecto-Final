@@ -223,7 +223,7 @@
 </value>
   </data>
   <data name="pbLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>731, 0</value>
+    <value>703, 0</value>
   </data>
   <data name="pbLogin.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 38</value>
@@ -302,7 +302,7 @@
     <value>4, 2, 0, 2</value>
   </data>
   <data name="menuContenedor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 38</value>
+    <value>772, 38</value>
   </data>
   <data name="menuContenedor.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -335,7 +335,7 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+    <value>772, 450</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Principal Backoffice</value>

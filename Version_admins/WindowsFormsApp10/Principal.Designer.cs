@@ -56,6 +56,7 @@
             // 
             this.menuGestionUsuarios.Name = "menuGestionUsuarios";
             resources.ApplyResources(this.menuGestionUsuarios, "menuGestionUsuarios");
+            this.menuGestionUsuarios.Click += new System.EventHandler(this.menuGestionUsuarios_Click);
             // 
             // menuLogin
             // 

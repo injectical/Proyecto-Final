@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
+            this.txthoraInicio = new System.Windows.Forms.TextBox();
+            this.txtPais = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
@@ -41,35 +41,37 @@
             this.btnAgrgar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.txtresultado = new System.Windows.Forms.TextBox();
+            this.lblresultado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtnombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(186, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtnombre.Location = new System.Drawing.Point(186, 30);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(100, 20);
+            this.txtnombre.TabIndex = 0;
             // 
-            // textBox2
+            // txtFecha
             // 
-            this.textBox2.Location = new System.Drawing.Point(186, 140);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtFecha.Location = new System.Drawing.Point(186, 140);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(100, 20);
+            this.txtFecha.TabIndex = 1;
             // 
-            // textBox3
+            // txthoraInicio
             // 
-            this.textBox3.Location = new System.Drawing.Point(186, 192);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.txthoraInicio.Location = new System.Drawing.Point(186, 192);
+            this.txthoraInicio.Name = "txthoraInicio";
+            this.txthoraInicio.Size = new System.Drawing.Size(100, 20);
+            this.txthoraInicio.TabIndex = 2;
             // 
-            // textBox6
+            // txtPais
             // 
-            this.textBox6.Location = new System.Drawing.Point(186, 85);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 5;
+            this.txtPais.Location = new System.Drawing.Point(186, 85);
+            this.txtPais.Name = "txtPais";
+            this.txtPais.Size = new System.Drawing.Size(100, 20);
+            this.txtPais.TabIndex = 5;
             // 
             // lblNombre
             // 
@@ -110,7 +112,7 @@
             // chkConfirmacionDeInicio
             // 
             this.chkConfirmacionDeInicio.AutoSize = true;
-            this.chkConfirmacionDeInicio.Location = new System.Drawing.Point(186, 243);
+            this.chkConfirmacionDeInicio.Location = new System.Drawing.Point(199, 269);
             this.chkConfirmacionDeInicio.Name = "chkConfirmacionDeInicio";
             this.chkConfirmacionDeInicio.Size = new System.Drawing.Size(51, 17);
             this.chkConfirmacionDeInicio.TabIndex = 12;
@@ -120,7 +122,7 @@
             // chkConfirmacionDeFinal
             // 
             this.chkConfirmacionDeFinal.AutoSize = true;
-            this.chkConfirmacionDeFinal.Location = new System.Drawing.Point(186, 295);
+            this.chkConfirmacionDeFinal.Location = new System.Drawing.Point(199, 321);
             this.chkConfirmacionDeFinal.Name = "chkConfirmacionDeFinal";
             this.chkConfirmacionDeFinal.Size = new System.Drawing.Size(48, 17);
             this.chkConfirmacionDeFinal.TabIndex = 13;
@@ -136,6 +138,7 @@
             this.btnAgrgar.TabIndex = 14;
             this.btnAgrgar.Text = "Agregar";
             this.btnAgrgar.UseVisualStyleBackColor = true;
+            this.btnAgrgar.Click += new System.EventHandler(this.btnAgrgar_Click);
             // 
             // btnEliminar
             // 
@@ -155,11 +158,30 @@
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             // 
+            // txtresultado
+            // 
+            this.txtresultado.Location = new System.Drawing.Point(186, 243);
+            this.txtresultado.Name = "txtresultado";
+            this.txtresultado.Size = new System.Drawing.Size(100, 20);
+            this.txtresultado.TabIndex = 17;
+            // 
+            // lblresultado
+            // 
+            this.lblresultado.AutoSize = true;
+            this.lblresultado.Location = new System.Drawing.Point(86, 250);
+            this.lblresultado.Name = "lblresultado";
+            this.lblresultado.Size = new System.Drawing.Size(55, 13);
+            this.lblresultado.TabIndex = 18;
+            this.lblresultado.Text = "Resultado";
+            this.lblresultado.Click += new System.EventHandler(this.label1_Click);
+            // 
             // GestionDeEventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 450);
+            this.Controls.Add(this.lblresultado);
+            this.Controls.Add(this.txtresultado);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgrgar);
@@ -169,10 +191,10 @@
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPais);
+            this.Controls.Add(this.txthoraInicio);
+            this.Controls.Add(this.txtFecha);
+            this.Controls.Add(this.txtnombre);
             this.Name = "GestionDeEventos";
             this.Text = "Gestion De Eventos";
             this.ResumeLayout(false);
@@ -182,10 +204,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.TextBox txtFecha;
+        private System.Windows.Forms.TextBox txthoraInicio;
+        private System.Windows.Forms.TextBox txtPais;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
@@ -195,5 +217,7 @@
         private System.Windows.Forms.Button btnAgrgar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.TextBox txtresultado;
+        private System.Windows.Forms.Label lblresultado;
     }
 }

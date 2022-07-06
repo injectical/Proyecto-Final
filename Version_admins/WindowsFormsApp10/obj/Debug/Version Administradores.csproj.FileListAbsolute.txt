@@ -16,3 +16,9 @@ C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\Wind
 C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Principal.fr-BI.resources
 C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\fr-BI\WindowsFormsApp10.resources.dll
 C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.GestionDeEventos.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\bin\Debug\Newtonsoft.Json.dll
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\bin\Debug\StreamJsonRpc.dll
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\bin\Debug\Newtonsoft.Json.xml
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\bin\Debug\es\StreamJsonRpc.resources.dll
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\Version Administradores.csproj.CopyComplete
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.GestionDeUsuarios.resources
