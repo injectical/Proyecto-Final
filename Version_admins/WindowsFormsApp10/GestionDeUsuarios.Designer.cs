@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtcorreo = new System.Windows.Forms.TextBox();
@@ -137,9 +137,9 @@
             this.label4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(137, 154);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 15);
+            this.label4.Size = new System.Drawing.Size(36, 15);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Correo";
+            this.label4.Text = "Email";
             // 
             // grbAdministradores
             // 
@@ -148,7 +148,7 @@
             this.grbAdministradores.Controls.Add(this.rbUsPago);
             this.grbAdministradores.Controls.Add(this.rbAdmDepor);
             this.grbAdministradores.Controls.Add(this.rbSuperUs);
-            this.grbAdministradores.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbAdministradores.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbAdministradores.Location = new System.Drawing.Point(110, 251);
             this.grbAdministradores.Name = "grbAdministradores";
             this.grbAdministradores.Size = new System.Drawing.Size(271, 73);
@@ -254,15 +254,16 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Carlito", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Carlito", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -281,6 +282,7 @@
             this.grbSelecciondevista.Controls.Add(this.rbUsuariosPagos);
             this.grbSelecciondevista.Controls.Add(this.rbtVistaUsuariosadm);
             this.grbSelecciondevista.Controls.Add(this.rdbUsuariosInvitados);
+            this.grbSelecciondevista.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbSelecciondevista.Location = new System.Drawing.Point(502, 280);
             this.grbSelecciondevista.Name = "grbSelecciondevista";
             this.grbSelecciondevista.Size = new System.Drawing.Size(246, 102);
@@ -291,6 +293,7 @@
             // rbSuperUsuario
             // 
             this.rbSuperUsuario.AutoSize = true;
+            this.rbSuperUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbSuperUsuario.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbSuperUsuario.Location = new System.Drawing.Point(141, 67);
             this.rbSuperUsuario.Name = "rbSuperUsuario";
@@ -304,6 +307,7 @@
             // rbUsuariosPagos
             // 
             this.rbUsuariosPagos.AutoSize = true;
+            this.rbUsuariosPagos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbUsuariosPagos.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbUsuariosPagos.Location = new System.Drawing.Point(17, 66);
             this.rbUsuariosPagos.Name = "rbUsuariosPagos";
@@ -317,6 +321,7 @@
             // rbtVistaUsuariosadm
             // 
             this.rbtVistaUsuariosadm.AutoSize = true;
+            this.rbtVistaUsuariosadm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbtVistaUsuariosadm.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtVistaUsuariosadm.Location = new System.Drawing.Point(141, 28);
             this.rbtVistaUsuariosadm.Name = "rbtVistaUsuariosadm";
@@ -330,13 +335,14 @@
             // rdbUsuariosInvitados
             // 
             this.rdbUsuariosInvitados.AutoSize = true;
+            this.rdbUsuariosInvitados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdbUsuariosInvitados.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbUsuariosInvitados.Location = new System.Drawing.Point(17, 28);
             this.rdbUsuariosInvitados.Name = "rdbUsuariosInvitados";
-            this.rdbUsuariosInvitados.Size = new System.Drawing.Size(87, 17);
+            this.rdbUsuariosInvitados.Size = new System.Drawing.Size(108, 17);
             this.rdbUsuariosInvitados.TabIndex = 0;
             this.rdbUsuariosInvitados.TabStop = true;
-            this.rdbUsuariosInvitados.Text = "Vista General";
+            this.rdbUsuariosInvitados.Text = "Usuarios invitados";
             this.rdbUsuariosInvitados.UseVisualStyleBackColor = true;
             this.rdbUsuariosInvitados.CheckedChanged += new System.EventHandler(this.rdbVistaGeneral_CheckedChanged);
             // 

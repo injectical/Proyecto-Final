@@ -66,10 +66,12 @@ namespace WindowsFormsApp10
 
                 if (rs.RecordCount > 0)
                 {
-                    rol = Convert.ToByte(rs.Fields[0].Value);//convierte lo que reciba a el tipo de dato byte, y lo asignamos a la variable rol
+                    //convierte lo que reciba a el tipo de dato byte, y lo asignamos a la variable rol
+                    rol = Convert.ToByte(rs.Fields[0].Value);
+                  
 
                     //AVERIGUA SI LA SESIÓN ESTA ABIERTA Y CUÁL ES EL ROL DEL USUARIO
-                    if (rol == 1) { 
+                    if (rol == 2) { 
                     
                        
                             frmPrincipal.menuEventos.Enabled = true;
@@ -81,7 +83,7 @@ namespace WindowsFormsApp10
 
                     }
 
-                    if (rol == 2) {
+                    if (rol == 1) {
                         frmPrincipal.menuEventos.Enabled = true;
                         frmPrincipal.menuLogin.Enabled = true;
                         frmPrincipal.menuGestionUsuarios.Enabled = true;
@@ -108,6 +110,20 @@ namespace WindowsFormsApp10
             adapter.Fill(dt, rs);
             return dt;
            
+        }
+        //metodo para controlar que se llenen todos los campos obligatorios
+        public static bool ControlCampos(string var) {
+            bool validar;
+
+            if (var.Equals(""))
+            {
+                validar = true;
+            }
+            else {
+                validar = false;
+            }
+
+            return validar;
         }
     }
 }

@@ -61,7 +61,9 @@ namespace WindowsFormsApp10
 
         }
 
+        private void GestionDeEventos_Load(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

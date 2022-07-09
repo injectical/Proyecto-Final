@@ -197,6 +197,7 @@
             this.Controls.Add(this.txtnombre);
             this.Name = "GestionDeEventos";
             this.Text = "Gestion De Eventos";
+            this.Load += new System.EventHandler(this.GestionDeEventos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
