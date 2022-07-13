@@ -98,6 +98,7 @@
             this.clbNotificaciones.Name = "clbNotificaciones";
             this.clbNotificaciones.Size = new System.Drawing.Size(386, 468);
             this.clbNotificaciones.TabIndex = 3;
+            this.clbNotificaciones.SelectedIndexChanged += new System.EventHandler(this.clbNotificaciones_SelectedIndexChanged);
             // 
             // Notificaciones
             // 

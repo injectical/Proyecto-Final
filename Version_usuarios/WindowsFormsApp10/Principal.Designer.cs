@@ -178,7 +178,6 @@
         #endregion
         private System.Windows.Forms.MenuStrip menuContenedor;
         public System.Windows.Forms.ToolStripMenuItem menuLogout;
-        private System.Windows.Forms.Label lblInicioSesion;
         public System.Windows.Forms.PictureBox pbLogin;
         public System.Windows.Forms.ToolStripMenuItem menuGestion;
         private System.Windows.Forms.ToolStripMenuItem modificarPerfilToolStripMenuItem;
@@ -187,6 +186,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuNotificaciones;
         private System.Windows.Forms.ToolStripMenuItem verPagisToolStripMenuItem;
         public System.Windows.Forms.Label lblSaludo;
+        public System.Windows.Forms.Label lblInicioSesion;
     }
 }
 

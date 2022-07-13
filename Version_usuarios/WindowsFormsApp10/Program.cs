@@ -7,7 +7,7 @@ using ADODB;
 
 namespace WindowsFormsApp10
 {
-  class Program
+    class Program
     {
 
         public static Principal frmPrincipal;
@@ -28,9 +28,9 @@ namespace WindowsFormsApp10
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Principal());
+            Application.Run(frmPrincipal = new Principal());
         }
-       
+
 
 
         public static void doyPermisos(string usuario)
@@ -52,8 +52,7 @@ namespace WindowsFormsApp10
             else
             {
                 //CAMBIAR DE ACUERDO AL CRITERIO QUE SE MANEJA EN LA TABLA DEL USUARIO
-                sql = "select nombre from usuario where email  ='" + usuario + "';";
-
+                sql = "select nombre from usuario where Nombre_Usuario ='" +usuario+ "';";
                 try
                 {
                     rs = conexion.Execute(sql, out contFilas);
@@ -69,15 +68,21 @@ namespace WindowsFormsApp10
                 {
 
                     //AVERIGUA SI LA SESIÓN ESTA ABIERTA
-                    
-                        frmPrincipal.btnEventos.Enabled = true;
-                        frmPrincipal.menuGestion.Enabled = true;
-                        frmPrincipal.menuLogout.Enabled = true;
 
-                    
+                    frmPrincipal.btnEventos.Enabled = true;
+                    frmPrincipal.menuGestion.Enabled = true;
+                    frmPrincipal.menuLogout.Enabled = true;
+                    frmPrincipal.pbLogin.Visible = false;
+                    frmPrincipal.lblInicioSesion.Visible = false;
+                    nombreUsuario = usuario;
+                    frmPrincipal.lblSaludo.Text = "Bienvenido " + usuario;
+
+
+
 
                     rs = null;
                     contFilas = null;
+
 
                 }
 
@@ -85,30 +90,36 @@ namespace WindowsFormsApp10
         }
 
 
-       
 
 
-       /* public static void cargarFormularioUsuario(string usuario)
+
+        public static void cargarFormularioUsuario(string usuario)
         {
             string sqlNombre;
             string sqlApellido;
             string sqlEmail;
-            string sqlMiembro;
+            string sqlUsuario;
             ADODB.Recordset rs;
             object contfilas;
             //SEGUN EL NOMBRE (NOMBRE DE USUARIO) TE TRAE LOS OTROS DATOS
-            sqlNombre = "select Nombre from Usuarios where Nombre = '" + usuario + "';";
+            sqlNombre = "select nombre from Usuario where Nombre_Usuario = '" + usuario + "';";
             rs = conexion.Execute(sqlNombre, out contfilas);
             sqlNombre = Convert.ToString(rs.Fields[0].Value);
             frmPerfil.txtNombre.Text = sqlNombre;
-            sqlApellido = "select Apellido from Usuarios where Nombre = '" + usuario + "';";
+            sqlApellido = "select apellido from Usuario where Nombre_Usuario = '" + usuario + "';";
+            rs = conexion.Execute(sqlApellido, out contfilas);
+            sqlApellido = Convert.ToString(rs.Fields[0].Value);
             frmPerfil.txtApellido.Text = sqlApellido;
-            sqlEmail = "select Email from Usuarios where Nombre = '" + usuario + "';";
+            sqlEmail = "select email from Usuario where Nombre_Usuario = '" + usuario + "';";
+            rs = conexion.Execute(sqlEmail, out contfilas);
+            sqlEmail = Convert.ToString(rs.Fields[0].Value);
             frmPerfil.txtEmail.Text = sqlEmail;
-            sqlMiembro = "select Miembro from Usuarios where Nombre = '" + usuario + "';";
-            frmPerfil.txtMiembro.Text = sqlMiembro;
+            sqlUsuario = "select Nombre_Usuario from Usuario where Nombre_Usuario = '" + usuario + "';";
+            rs = conexion.Execute(sqlUsuario, out contfilas);
+            sqlUsuario = Convert.ToString(rs.Fields[0].Value);
+            frmPerfil.txtUsuario.Text = sqlUsuario;
         }
-        */
+        
         }
 
 }

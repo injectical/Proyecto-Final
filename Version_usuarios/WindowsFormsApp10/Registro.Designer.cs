@@ -39,36 +39,38 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.lnkVolver = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(200, 102);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Location = new System.Drawing.Point(200, 117);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(202, 28);
             this.txtNombre.TabIndex = 0;
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(200, 316);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContraseña.Location = new System.Drawing.Point(200, 309);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(202, 28);
             this.txtContraseña.TabIndex = 2;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(200, 239);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Location = new System.Drawing.Point(200, 244);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(202, 28);
             this.txtEmail.TabIndex = 3;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(200, 168);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellido.Location = new System.Drawing.Point(200, 179);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(202, 28);
             this.txtApellido.TabIndex = 4;
@@ -76,7 +78,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(76, 103);
+            this.lblNombre.Location = new System.Drawing.Point(76, 118);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(79, 24);
@@ -86,7 +88,7 @@
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Location = new System.Drawing.Point(76, 323);
+            this.lblContraseña.Location = new System.Drawing.Point(76, 313);
             this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(106, 24);
@@ -106,7 +108,7 @@
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(76, 170);
+            this.lblApellido.Location = new System.Drawing.Point(78, 182);
             this.lblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(79, 24);
@@ -117,18 +119,19 @@
             // 
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Location = new System.Drawing.Point(118, 417);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 38);
             this.button1.TabIndex = 9;
             this.button1.Text = "Enviar ";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnBorrar
             // 
             this.btnBorrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBorrar.Location = new System.Drawing.Point(280, 417);
-            this.btnBorrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(94, 40);
             this.btnBorrar.TabIndex = 10;
@@ -141,7 +144,7 @@
             this.lnkVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnkVolver.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lnkVolver.LinkColor = System.Drawing.Color.Red;
-            this.lnkVolver.Location = new System.Drawing.Point(26, 32);
+            this.lnkVolver.Location = new System.Drawing.Point(8, 20);
             this.lnkVolver.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lnkVolver.Name = "lnkVolver";
             this.lnkVolver.Size = new System.Drawing.Size(64, 24);
@@ -150,12 +153,33 @@
             this.lnkVolver.Text = "Volver";
             this.lnkVolver.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkVolver_LinkClicked);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(76, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.MaximumSize = new System.Drawing.Size(80, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 48);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Nombre usuario";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(200, 56);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(202, 28);
+            this.txtUsuario.TabIndex = 12;
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(476, 525);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lnkVolver);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.button1);
@@ -169,9 +193,10 @@
             this.Controls.Add(this.txtNombre);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Registro";
             this.Text = "Formulario de registro de usuario";
+            this.Load += new System.EventHandler(this.Registro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,5 +215,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.LinkLabel lnkVolver;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtUsuario;
     }
 }

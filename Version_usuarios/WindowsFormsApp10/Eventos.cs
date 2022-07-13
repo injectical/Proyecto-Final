@@ -24,7 +24,7 @@ namespace WindowsFormsApp10
             InitializeComponent();
         }
         
-
+        //DATOS FIJOS PARA VISUALIZAR SOLO, HAY QUE VER COMO HACER LOS SELECT Y VOLCARLOS EN EL DATAGRID
         private List<Evento> GetFutbol()
         {
             var listaFutbol = new List<Evento>();
@@ -116,15 +116,16 @@ namespace WindowsFormsApp10
 
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        /*EN CONSTRUCCION
+         * 
+         * private void btnBuscar_Click(object sender, EventArgs e)
         {
+            ADODB.ADOCommandConstruction sentencia = "select * from eventos where Tipo = '" + tipo + "';";
 
-            SqlConnection conexion = new SqlConnection("server=DIEGO-PC ; database=base1 ; integrated security = true");//ESTA ULTIMA PARTE DEBERIA SER CAMBIADA POR LOS VALORES DE LA MAQUINA PROPIA
-                conexion.Open();
+
             if (txtPais != null)
             {
                 string tipo = txtTipo.Text;
-                string consulta = "select * from eventos where Tipo = '" + tipo + "';";
                 SqlCommand comando = new SqlCommand(consulta, conexion);
                 SqlDataReader registro = comando.ExecuteReader();
                     if ((registro.Read()))
@@ -132,6 +133,7 @@ namespace WindowsFormsApp10
                     dataGridDeportes.DataSource = registro;
                     }
             }
+            */
     }
 }
-}
+

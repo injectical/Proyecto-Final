@@ -29,7 +29,7 @@ namespace WindowsFormsApp10
             btnEventos.Enabled = false;
             menuGestion.Enabled = false;
             menuLogout.Enabled = false;
-            lblSaludo.Text = "Bienvenido" + Program.nombreUsuario;
+           
             MessageBox.Show("Inicie sesión para usar la aplicación");
 
         }

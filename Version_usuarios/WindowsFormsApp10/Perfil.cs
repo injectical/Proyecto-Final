@@ -22,7 +22,7 @@ namespace WindowsFormsApp10
 
         private void Perfil_Load(object sender, EventArgs e)
         {
-            //Program.cargarFormularioUsuario(Program.nombreUsuario);
+            Program.cargarFormularioUsuario(Program.nombreUsuario);
       
         }
 

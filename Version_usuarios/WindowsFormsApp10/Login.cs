@@ -18,6 +18,7 @@ namespace WindowsFormsApp10
 
         }
 
+        //VER COMO HACER UN LOGOUT, ESTO SOLO CIERRA LA VENTANA
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -38,7 +39,6 @@ namespace WindowsFormsApp10
             }
             Program.conexion.CursorLocation = ADODB.CursorLocationEnum.adUseClient;
             Program.doyPermisos(txtNombre.Text);
-            Program.nombreUsuario = txtNombre.Text;//CARGA EN UNA VARIABLE GLOBAL EL NOMBRE DE USUARIO
             this.Close();
             
             

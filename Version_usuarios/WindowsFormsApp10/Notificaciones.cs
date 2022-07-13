@@ -28,5 +28,10 @@ namespace WindowsFormsApp10
             
 
         }
+
+        private void clbNotificaciones_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
