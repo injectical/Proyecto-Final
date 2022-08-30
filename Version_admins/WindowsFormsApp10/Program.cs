@@ -50,8 +50,8 @@ namespace WindowsFormsApp10
             }
             else
             {
-
-                sql = "select USUARIO.rol from USUARIO where NOMBRE= '"+usuario+"';";
+               // conexion.Execute("use sport360; ", out contFilas);
+                sql = "select USUARIO.rol from USUARIO where nombre_clave= '"+usuario+"';";
 
                 try
                 {
@@ -124,6 +124,17 @@ namespace WindowsFormsApp10
             }
 
             return validar;
+        }
+
+        public static void LimpiarCampos() {
+            frmgestiondeusuarios.txtid.Clear();
+            frmgestiondeusuarios.txtNombre.Clear();
+            frmgestiondeusuarios.txtid.Clear();
+            frmgestiondeusuarios.txtApellido.Clear();
+            frmgestiondeusuarios.txtcorreo.Clear();
+            frmgestiondeusuarios.txtNombreDeUSuarioClave.Clear();
+
+
         }
     }
 }

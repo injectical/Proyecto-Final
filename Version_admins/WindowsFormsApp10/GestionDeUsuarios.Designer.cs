@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtcorreo = new System.Windows.Forms.TextBox();
@@ -58,6 +58,7 @@
             this.txtrol = new System.Windows.Forms.TextBox();
             this.txtid = new System.Windows.Forms.TextBox();
             this.lblid = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.grbAdministradores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -214,7 +215,7 @@
             this.btncrear.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btncrear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btncrear.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncrear.Location = new System.Drawing.Point(96, 344);
+            this.btncrear.Location = new System.Drawing.Point(167, 341);
             this.btncrear.Name = "btncrear";
             this.btncrear.Size = new System.Drawing.Size(77, 22);
             this.btncrear.TabIndex = 10;
@@ -227,7 +228,7 @@
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(205, 343);
+            this.btnEliminar.Location = new System.Drawing.Point(268, 340);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 11;
@@ -240,7 +241,7 @@
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(306, 344);
+            this.btnModificar.Location = new System.Drawing.Point(369, 340);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 12;
@@ -254,11 +255,11 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Carlito", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Carlito", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -285,7 +286,7 @@
             this.grbSelecciondevista.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbSelecciondevista.Location = new System.Drawing.Point(502, 280);
             this.grbSelecciondevista.Name = "grbSelecciondevista";
-            this.grbSelecciondevista.Size = new System.Drawing.Size(246, 102);
+            this.grbSelecciondevista.Size = new System.Drawing.Size(280, 102);
             this.grbSelecciondevista.TabIndex = 14;
             this.grbSelecciondevista.TabStop = false;
             this.grbSelecciondevista.Text = "Seleccion de vista";
@@ -325,10 +326,10 @@
             this.rbtVistaUsuariosadm.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtVistaUsuariosadm.Location = new System.Drawing.Point(141, 28);
             this.rbtVistaUsuariosadm.Name = "rbtVistaUsuariosadm";
-            this.rbtVistaUsuariosadm.Size = new System.Drawing.Size(102, 17);
+            this.rbtVistaUsuariosadm.Size = new System.Drawing.Size(139, 17);
             this.rbtVistaUsuariosadm.TabIndex = 1;
             this.rbtVistaUsuariosadm.TabStop = true;
-            this.rbtVistaUsuariosadm.Text = "Administradores";
+            this.rbtVistaUsuariosadm.Text = "Administrador deportivo\r\n";
             this.rbtVistaUsuariosadm.UseVisualStyleBackColor = true;
             this.rbtVistaUsuariosadm.CheckedChanged += new System.EventHandler(this.rbtVistaUsuariosadm_CheckedChanged);
             // 
@@ -401,6 +402,19 @@
             this.lblid.TabIndex = 20;
             this.lblid.Text = "ID";
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(66, 341);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(77, 22);
+            this.btnLimpiar.TabIndex = 21;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // GestionDeUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -408,6 +422,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(871, 394);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lblid);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.txtrol);
@@ -446,11 +461,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtcorreo;
-        private System.Windows.Forms.TextBox txtNombreDeUSuarioClave;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblNombreClave;
@@ -473,8 +483,13 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Label lblRol;
-        private System.Windows.Forms.TextBox txtrol;
         private System.Windows.Forms.Label lblid;
         public System.Windows.Forms.TextBox txtid;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.TextBox txtApellido;
+        public System.Windows.Forms.TextBox txtcorreo;
+        public System.Windows.Forms.TextBox txtNombreDeUSuarioClave;
+        public System.Windows.Forms.TextBox txtrol;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

@@ -1,0 +1,16 @@
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_usuarios\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe.config
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_usuarios\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.exe
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_usuarios\WindowsFormsApp10\bin\Debug\WindowsFormsApp10.pdb
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_usuarios\WindowsFormsApp10\obj\Debug\Versión usuarios.csprojAssemblyReference.cache
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_usuarios\WindowsFormsApp10\obj\Debug\Interop.ADODB.dll
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_usuarios\WindowsFormsApp10\obj\Debug\Versión usuarios.csproj.ResolveComReference.cache
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_usuarios\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Eventos.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_usuarios\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Perfil.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_usuarios\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Login.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_usuarios\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Principal.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_usuarios\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Properties.Resources.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_usuarios\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.Registro.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_usuarios\WindowsFormsApp10\obj\Debug\Versión usuarios.csproj.GenerateResource.cache
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_usuarios\WindowsFormsApp10\obj\Debug\Versión usuarios.csproj.CoreCompileInputs.cache
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_usuarios\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.exe
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_usuarios\WindowsFormsApp10\obj\Debug\WindowsFormsApp10.pdb

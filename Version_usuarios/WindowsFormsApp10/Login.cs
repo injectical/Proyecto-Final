@@ -29,7 +29,7 @@ namespace WindowsFormsApp10
             try
             {
                 //ABRIMOS LA CONEXIÓN CON LA BD CON USUARIO Y CONTRASEÑA
-                Program.conexion.Open("miodbc", txtNombre.Text, txtContraseña.Text);
+                Program.conexion.Open("miodbc3", txtNombre.Text, txtContraseña.Text);
             }
             catch
             {

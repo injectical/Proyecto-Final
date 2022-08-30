@@ -34,10 +34,6 @@
             this.menuLogin = new System.Windows.Forms.ToolStripMenuItem();
             this.menuContenedor = new System.Windows.Forms.MenuStrip();
             this.menuEventos = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogin)).BeginInit();
             this.menuContenedor.SuspendLayout();
             this.SuspendLayout();
@@ -76,35 +72,9 @@
             // 
             // menuEventos
             // 
-            this.menuEventos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoToolStripMenuItem,
-            this.modificarToolStripMenuItem,
-            this.eliminarToolStripMenuItem,
-            this.verToolStripMenuItem});
             this.menuEventos.Name = "menuEventos";
             resources.ApplyResources(this.menuEventos, "menuEventos");
             this.menuEventos.Click += new System.EventHandler(this.menuEventos_Click);
-            // 
-            // nuevoToolStripMenuItem
-            // 
-            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            resources.ApplyResources(this.nuevoToolStripMenuItem, "nuevoToolStripMenuItem");
-            this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
-            // 
-            // modificarToolStripMenuItem
-            // 
-            this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            resources.ApplyResources(this.modificarToolStripMenuItem, "modificarToolStripMenuItem");
-            // 
-            // eliminarToolStripMenuItem
-            // 
-            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            resources.ApplyResources(this.eliminarToolStripMenuItem, "eliminarToolStripMenuItem");
-            // 
-            // verToolStripMenuItem
-            // 
-            this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            resources.ApplyResources(this.verToolStripMenuItem, "verToolStripMenuItem");
             // 
             // Principal
             // 
@@ -133,10 +103,6 @@
         public System.Windows.Forms.ToolStripMenuItem menuLogin;
         private System.Windows.Forms.MenuStrip menuContenedor;
         public System.Windows.Forms.ToolStripMenuItem menuEventos;
-        private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verToolStripMenuItem;
     }
 }
 

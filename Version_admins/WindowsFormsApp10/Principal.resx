@@ -265,30 +265,6 @@
   <data name="menuContenedor.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 15.75pt, style=Bold</value>
   </data>
-  <data name="nuevoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 34</value>
-  </data>
-  <data name="nuevoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ingresar nuevo</value>
-  </data>
-  <data name="modificarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 34</value>
-  </data>
-  <data name="modificarToolStripMenuItem.Text" xml:space="preserve">
-    <value>Modificar</value>
-  </data>
-  <data name="eliminarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 34</value>
-  </data>
-  <data name="eliminarToolStripMenuItem.Text" xml:space="preserve">
-    <value>Eliminar</value>
-  </data>
-  <data name="verToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 34</value>
-  </data>
-  <data name="verToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ver</value>
-  </data>
   <data name="menuEventos.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 34</value>
   </data>
@@ -356,30 +332,6 @@
     <value>menuEventos</value>
   </data>
   <data name="&gt;&gt;menuEventos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nuevoToolStripMenuItem.Name" xml:space="preserve">
-    <value>nuevoToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;nuevoToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;modificarToolStripMenuItem.Name" xml:space="preserve">
-    <value>modificarToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;modificarToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;eliminarToolStripMenuItem.Name" xml:space="preserve">
-    <value>eliminarToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;eliminarToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;verToolStripMenuItem.Name" xml:space="preserve">
-    <value>verToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;verToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

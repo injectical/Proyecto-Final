@@ -62,28 +62,29 @@ namespace WindowsFormsApp10
             correo = txtcorreo.Text;
             nombreClave = txtNombreDeUSuarioClave.Text;
             //segun el rol que se seleccione se le otorgara su correspondiente previlegio
+            //en el caso del super usuario va a tener todos los permisos sobre la bdd sport360
             if (rbSuperUs.Checked)
             {
                 validarRol = true;
-                privilegios = "grant all on sport360.* to '" + nombreClave + "'";
+                privilegios = "grant all privileges on *.* to '" + nombreClave + "'@'localhost';";
                 Rol = 1;
             }
-            else if (rbAdmDepor.Checked)
+             else if (rbAdmDepor.Checked)
             {
                 validarRol = true;
-                privilegios = "grant all on sport360.* to '" + nombreClave + "'";
+                privilegios = "grant all privileges on sport360.* to '" + nombreClave + "'@'localhost';";
                 Rol = 2;
             }
             else if (rbUsPago.Checked)
             {
                 validarRol = true;
-                privilegios = "grant select on sport360.* to '" + nombreClave + "'";
+                privilegios = "grant select on sport360.* to '" + nombreClave + "'@'localhost';";
                 Rol = 4;
             }
             else if (rbUsInvi.Checked)
             {
                 validarRol = true;
-                privilegios = "grant select on sport360.* to '" + nombreClave + "'";
+                privilegios = "grant select on sport360.* to '" + nombreClave + "'@'localhost';";
                 Rol = 3;
             }
 
@@ -116,7 +117,34 @@ namespace WindowsFormsApp10
                 MessageBox.Show("Falta seleccionar un rol para el usuario");
             }
 
-            if (validar && validar) {
+            if (validar && validarRol) {
+
+                //se crea usuario en mysql con el nombre_clave
+
+                string CrearUsuario = "CREATE USER '" + nombreClave + "'@'localhost' IDENTIFIED BY '1234';";
+
+                try
+                {
+
+                    Program.conexion.Execute(CrearUsuario, out contFilas);
+                }
+                catch
+                {
+                    MessageBox.Show("error al crear el usuario ");
+                    return;
+                }
+                //se ejecuta la asignacion de privilegios para el usuario 
+                try
+                {
+
+                    Program.conexion.Execute(privilegios, out contFilas);
+                    Program.conexion.Execute("FLUSH PRIVILEGES;",out contFilas);
+                }
+                catch
+                {
+                    MessageBox.Show("error al ingresar los privilegios");
+                    return;
+                }
 
 
                 sql = "insert into usuario (NOMBRE,APELLIDO,EMAIL,rol,nombre_clave) values ('" + nombre + "','" + apellido + "','" + correo + "'," + Rol + ",'" + nombreClave + "');";
@@ -137,31 +165,7 @@ namespace WindowsFormsApp10
 
 
                 Program.frmgestiondeusuarios.dataGridView1.DataSource = Program.listarUsuarios("select * from usuario where rol= " + Rol + "; ");
-                //se crea usuario en mysql con el nombre_clave
-
-                string CrearUsuario = "grant usage on soprt360.* TO '" + nombreClave + "'@'localhost' identified by '1234' ;";
-
-                try
-                {
-
-                    Program.conexion.Execute(CrearUsuario, out contFilas);
-                }
-                catch
-                {
-                    MessageBox.Show("error al crear el usuario ");
-                    return;
-                }
-                //se ejecuta la asignacion de privilegios para el usuario 
-                try
-                {
-
-                    Program.conexion.Execute(privilegios, out contFilas);
-                }
-                catch
-                {
-                    MessageBox.Show("error al ingresar los privilegios");
-                    return;
-                }
+                Program.LimpiarCampos();
 
             }
 
@@ -299,6 +303,11 @@ namespace WindowsFormsApp10
             string nombre = txtBuscar.Text;
             Program.frmgestiondeusuarios.dataGridView1.DataSource = Program.listarUsuarios("select * from usuario where nombre_clave= '" +nombre + "'; ");
 
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Program.LimpiarCampos();
         }
     }
 }

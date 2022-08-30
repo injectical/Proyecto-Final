@@ -27,7 +27,7 @@ namespace WindowsFormsApp10
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Principal());
+            Application.Run(frmPrincipal = new Principal());
         }
 
         public static void doyPermisos(string usuario)
@@ -50,7 +50,7 @@ namespace WindowsFormsApp10
             else
             {
 
-                sql = "select rol from usuarios where usuario ='" + usuario + "';";
+                sql = "select USUARIO.rol from USUARIO where nombre_clave= '" + usuario + "';";
 
                 try
                 {

@@ -46,6 +46,7 @@ namespace WindowsFormsApp10
 
         private void menuLogin_Click(object sender, EventArgs e)
         {
+            Program.conexion.Close();
             this.Close();
         }
 
@@ -63,7 +64,10 @@ namespace WindowsFormsApp10
 
         private void menuEventos_Click(object sender, EventArgs e)
         {
-           
+
+            Program.frmgestionEventos = new GestionDeEventos();
+            Program.frmgestionEventos.MdiParent = this;
+            Program.frmgestionEventos.Show();
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -73,9 +77,6 @@ namespace WindowsFormsApp10
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Program.frmgestionEventos = new GestionDeEventos();
-            Program.frmgestionEventos.MdiParent = this;
-            Program.frmgestionEventos.Show();
         }
 
         private void menuGestionUsuarios_Click(object sender, EventArgs e)
