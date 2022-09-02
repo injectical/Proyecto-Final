@@ -1,0 +1,29 @@
+#!/bin/bash
+clear
+
+
+while [ "$opc" != "0" ]
+do
+
+echo "0-Salir"
+echo "1-Alta de usuario"
+echo  "2-Baja de usuario"
+echo  "3-Modificacion de usuario"
+read -p "Elija una opcion: " opc
+
+case $opc in
+
+1) read -p "Ingrese el nombre del usuario: " nombre
+
+useradd -d /home/"$nombre" -s /bin/bash -mk "$nombre"
+echo "$usuario"#1234 | passwd --stdin "$usuario" ;;
+2) ;;
+3)
+ read -p "Ingrese el nombre del usuario: " nombre
+userdel -r "$nombre"
+ ;;
+0) exit;;
+*) echo "Opcion incorrecta!";;
+esac
+
+done

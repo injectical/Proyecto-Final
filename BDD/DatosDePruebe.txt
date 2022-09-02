@@ -1,0 +1,441 @@
+/*('uruguay','peñarol vs nasional','2022/01/08','14:15',true,true,'peñarol 1 nasional 2')*/
+insert into evento (pais,nombre,fecha_inicio,hora_de_inicio,inicio,final,resultado) 
+values ('uruguay','rampla vs cerro', '2022/08/13','14:15',true,true,'rampla 2 cerro 0');
+
+
+insert into disciplina(nombre) values ('futbol');
+
+insert into equipo (nombre,pais,id_disciplina_equipo) values ('peñarol','uruguay',1);
+insert into equipo (nombre,pais,id_disciplina_equipo) values ('Rampla','uruguay',1),('Cerro','Uruguay',1);
+
+insert into deportista(fecha_nac,nombre,apellido,pais,id_disciplina_depor) values 
+('1989/10/31','luis','suarez','uruguay',1),
+('1989/10/31','carlos','bueno','uruguay',1);
+
+insert into deportista_group values(4,'defensa'),(5,'golero'),(6,'defensa'),(7,'defensa'),(8,'medio campista');
+insert into deportista_group values(3,'delantero');
+
+
+insert into pertenece values (1,1,'2022/9/24'),(2,2,'2022/9/24');
+
+insert into vs values(3,'rampla','cerro','2','0');
+
+insert into participan values (1,1,1,'perdio'),(2,2,1,'gano');
+
+insert into Deportista(fecha_nac,nombre,apellido,pais,id_disciplina_depor)values ('1995/05/08', 'Roberto', 'Suarez', 'Uruguay', 1);
+
+insert into Deportista (fecha_nac, nombre, apellido, pais, id_disciplina_depor) values ('2000/10/29', 'Alberto', 'Diaz', 'Uruguay', 1);
+insert into Deportista (fecha_nac, nombre, apellido, pais, id_disciplina_depor) values ('1990/01/13', 'Willian', 'Gonzales', 'Argentina', 1);
+insert into Deportista (fecha_nac, nombre, apellido, pais, id_disciplina_depor) values ('2001/05/22', 'Gonzalo', 'Ramos', 'Argentina', 1);
+insert into Deportista (fecha_nac, nombre, apellido, pais, id_disciplina_depor) values ('1993/10/24', 'Facundo', 'Torres', 'España', 1);
+insert into Deportista (fecha_nac, nombre, apellido, pais, id_disciplina_depor) values ('1987/06/19', 'Damian', 'Olivera', 'España',1);
+
+insert into Evento (pais, nombre, fecha_inicio, hora_de_inicio, inicio, final, resultado) values ('Uruguay', 'Peñarol vs Nacional', '2022/11/21', '18:30', true, true, 'Peñarol 3 Nacional 2');
+insert into Evento (pais, nombre, fecha_inicio, hora_de_inicio, inicio, final, resultado) values ('Argentina', 'Boca vs River', '2022/10/25', '20:30', true, true, 'Boca 5 River 0');
+insert into Evento (pais, nombre, fecha_inicio, hora_de_inicio, inicio, final, resultado) values ('España', 'Barcelona vs Real Madrid', '2022/11/16', '14:00', true, true, 'Barcelona 6  Real Madrid 2');  
+
+
+insert into Equipo (nombre, pais, id_disciplina_equipo) values ('Boca', 'Argentina', 1);
+insert into Equipo (nombre, pais, id_disciplina_equipo) values ('River', 'Argentina', 1);
+insert into Equipo (nombre, pais, id_disciplina_equipo) values ('Barcelona', 'España', 1);
+insert into Equipo (nombre, pais, id_disciplina_equipo) values ('Real_Madrid', 'España', 1);
+
+insert into Usuario (nombre, apellido, email, rol, nombre_clave) values ('Pedro', 'Sanchez', 'pepes@gmail.com', 1, 'pedrosan');
+insert into Usuario (nombre, apellido, email, rol, nombre_clave) values ('Adriana', 'Vazquez', 'adrivaz@outlook.com', 2, 'adrivas15');
+insert into Usuario (nombre, apellido, email, rol, nombre_clave) values ('Gerardo', 'Gonsalez', 'ggonza@hotmail.com', 3, 'geragon29');
+insert into Usuario (nombre, apellido, email, rol, nombre_clave) values ('Alberto', 'Perez', 'perezal@yahoo.com', 4, 'perezalberto12');
+
+insert into detalles (nom_det) values ('gol'),('tarjetas_rojas'),('nombre del juez'),('tarjeta amarilla');
+
+show create table deportista_group;
+update equipo set nombre ='Nacional' where id_equipo=1;
+
+insert into vs values(5,'Boca','River','5','0'),(6,'Barcelona','Real madrid','6','2');
+
+insert into pertenece values(3,3,'2022/05/01'),(4,4,'2019/05/8'),(5,5,'2019/01/9'),(6,6,'2019/01/10'),(7,8,'2019/01/11'),(8,7,'2019/01/12');
+
+insert into participan values(3,3,3,'gano'),(4,4,3,'perdio'),(5,5,5,'gano'),(6,6,6,'perdio'),(7,8,6,'gano'),(8,7,6,'perdio');
+
+insert into deportista (fecha_nac, nombre, apellido, pais, id_disciplina_depor) values ('1987/06/20','Iñaki','Peña','España',1),
+('1987/06/21','Sergiño','Dest','Brasil',1),('1987/06/22','Gerade','Pique','España',1),
+('1987/06/23','Ronald','Araujo','Uruguay',1),('1987/06/24','Jordi','Alba','España',1),
+('1987/06/25','Sergio','Busquets','España',1),('1987/06/26','Pedri','A','España',1)
+,('1987/06/27','Sergio','Roberto','España',1),('1987/06/28','Robert','Lewandowski','Polonia',1),
+('1987/06/29','Raphina','D','Brasil',1),('1987/06/20','Ferran','Torres','España',1),
+('1987/05/01','Courtois','Silva','España',1);
+
+insert into deportista (fecha_nac, nombre, apellido, pais, id_disciplina_depor) values ('1987/05/2','Daniel','Carvajal','España',1),
+('1987/05/3','Eder','Militao','Brasil',1),('1987/05/4','David','Alaba','Asturia',1),
+('1987/05/5','Ferland','Mendy','Francia',1),
+('1987/05/6','Toni','Kroos','Alemania',1),
+('1987/05/7','Luka','Modric','Croacia',1),
+('1987/05/8','Federica','Valverde','Uruguay',1),
+('1987/05/9','Eden','Hazard','Belgica',	1),
+('1987/05/10','karin','Benzema','Francia',1),
+('1987/05/11','Mariano','Diaz','España',1)
+;
+
+insert into deportista (fecha_nac, nombre, apellido, pais, id_disciplina_depor) values 
+('1987/05/12',	'Sergio',	'Rochet',	'Uruguay',	1),
+('1987/05/13',	'Nicolas', 	'Marichal',	'Uruguay',	1),
+('1987/05/14',	'Camilo', 	'Candido',	'Uruguay',	1),
+('1987/05/15',	'Jose',	'Rodrigez',	'Uruguay',	1),
+('1987/05/16',	'Leonardo',	'Lozano',	'Uruguay',	1),
+('1987/05/17',	'Francisco',	'Ginella',	'Uruguay',	1),
+('1987/05/18',	'Felipe',	'Carballo',	'Uruguay',	1),
+('1987/05/19',	'Bruno', 	'Ocampo',	'Uruguay',	1),
+('1987/05/20',	'Juan', 	'Gutierrez',	'Uruguay',	1),
+('1987/05/21',	'Franco', 	'Fagubndez',	'Uruguay',	1);
+
+insert into deportista (fecha_nac, nombre, apellido, pais, id_disciplina_depor) values 
+('1987/05/22',	'Kevin',	'Dawson',	'Uruguay',	1),
+('1987/05/23',	'Rodrigo',	'Petryk'	,'Uruguay'	,1),
+('1987/05/24',	'Pedro',	'Milans',	'Uruguay',	1),
+('1987/05/25',	'Yeferson',	'Quintana',	'Uruguay',	1),
+('1987/05/26',	'Matias',	'Agirregaray',	'Uruguay',	1),
+('1987/05/27',	'Brian',	'Lozano',	'Uruguay',	1),
+('1987/05/28',	'Walter',	'Gargano',	'Uruguay',	1),
+('1987/05/29',	'Ignacio',	'Laquintana',	'Uruguay',	1),
+('1987/05/30',	'Juan', 	'Boselli',	'Uruguay',	1),
+('1987/01/31',	'Joaquin',	'Zeballos',	'Uruguay',	1),
+('1987/01/32'	,'Lucas',	'Viatri',	'Argentina',	1);
+
+insert into evento   (pais, nombre, fecha_inicio, hora_de_inicio, inicio, final, resultado) values
+ ('Uruguay','Copa de clubes','2022/02/01','15:00',true,true,'Campeon Barcelona'),
+ ('Uruguay','Peñarol vs Nacional','2022/02/01',	'15:00',	true,	true,	'Peñarol 1 Nacional 2'),
+ ('Uruguay',	'Barcelona vs Real Madrid',	'2022/02/02',	'15:00',	true,	true,	'Barcelona 3  Real Madrid 1'),
+ ('Uruguay',	'Bacelona vs nacional',	'2022/02/04',	'15:00',	true,	true,	'Barcelona 4 nacional 1'),
+ ('Uruguay',	'Real Madrid vs Peñarol',	'2022/02/06',	'15:00',	true,	true,	'Real madrid 4 Peñarol 1'),
+ ('Uruguay',	'Nacional vs Real Madrid',	'2022/02/08',	'15:00',	true,	true,	'Nacional 1 Real Madrid 4'),
+ ('Uruguay',	 'Peñarol vs Barcelona'	,'2022/02/10',	'15:00',	true,	true,	'Peñarol 1 Barcelona 4'); 
+
+
+insert into vs values
+(9,	'Peñarol',	'Nacional',	2,	1),
+(10,	'Barcelona',	'Real madrid',	3,	1),
+(11,	'Barcelona',	'Nacional'	,4,	1),
+(12,	'Real madrid',	'peñarol',	4,	1),
+(13,	'nasional',	'Real madrid',	1,	4),
+(14,	'Peñarol',	'Barcelona',	1,	4);
+
+insert into vs (id_evento_vs,p1,p2) values
+(7,'Real madrid', 'Barcelona');
+
+insert into deportista_group values
+(9,	'Golero'),
+(10,	'Defensa'),
+(11,	'Defensa'),
+(12,	'Defensa'),
+(13,	'Defensa'),
+(14,	'medio campista'),
+(15,	'medio campista'),
+(16,	'medio campista'),
+(17,	'delantero'),
+(18,	'Dlantero'),
+(19,	'Delantero'),
+(20,	'Golero'),
+(21,	'Defensa'),
+(22,	'Defensa'),
+(23,	'Defensa'),
+(24,	'Defensa'),
+(25,	'medio campista'),
+(26,	'medio campista'),
+(27,	'medio campista'),
+(28,	'Delantero'),
+(29,	'Delantero'),
+(30,	'Delantero'),
+(31,	'Golero'),
+(32,	'Defensa'),
+(33,	'Defensa'),
+(34,	'Defensa'),
+(35,	'Defensa'),
+(36,	'medio campista'),
+(37,	'medio campista'),
+(38,	'Extremo Derecho'),
+(39,	'Delantero'),
+(40,	'Delantero'),
+(41,	'Golero'),
+(42,	'Defensa'),
+(43,	'Defensa'),
+(44,	'Defensa'),
+(45,	'Defensa'),
+(46,	'Mediocampista'),
+(47,	'Mdiocampista'),
+(48,	'Mediocampista'),
+(49,	'Delantero'),
+(50,	'Delantero'),
+(51,	'Delantero');
+
+insert into pertenece values 
+
+(9,	7,	'2019/01/13'),
+(10,	7,	'2019/01/14'),
+(11,	7,	'2019/01/15'),
+(12,	7,	'2019/01/16'),
+(13,	7,	'2019/01/17'),
+(14,	7,	'2019/01/18'),
+(15,	7,	'2019/01/19'),
+(16,	7,	'2019/01/20'),
+(17,	7,	'2019/01/21'),
+(18,	7,	'2019/01/22'),
+(19,	7,	'2019/01/23'),
+(20,	8,	'2010/06/1'),
+(21,	8,	'2010/06/2'),
+(22,	8,	'2010/06/3'),
+(23,	8,	'2010/06/4'),
+(24,	8,	'2010/06/5'),
+(25,	8,	'2010/06/6'),
+(26,	8,	'2010/06/7'),
+(27,	8,	'2010/06/8'),
+(28,	8,	'2010/06/9'),
+(29,	8,	'2010/06/10'),
+(31,	1,	'2021/09/1'),
+(32,	1,	'2021/09/2'),
+(33,	1,	'2021/09/3'),
+(34,	1,	'2021/09/4'),
+(35,	1,	'2021/09/5'),
+(36,	1,	'2021/09/6'),
+(37,	1,	'2021/09/7'),
+(38,	1,	'2021/09/8'),
+(39,	1,	'2021/09/9'),
+(40,	1,	'2021/09/10'),
+(41,	2,	'2020/3/1'),
+(42,	2,	'2020/3/2'),
+(43,	2,	'2020/3/3'),
+(44,	2,	'2020/3/4'),
+(45,	2,	'2020/3/5'),
+(46,	2,	'2020/3/6'),
+(47,	2,	'2020/3/7'),
+(48,	2,	'2020/3/8'),
+(49,	2,	'2020/3/9'),
+(50,	2,	'2020/3/10'),
+(51,	2,	'2020/3/11');
+
+
+
+
+insert into participan (id_equipo,id_depor_grup,id_evento_vs) values
+(7,	9,	7),
+(7,	10,	7),
+(7,	11,	7),
+(7,	12,	7),
+(7,	13,	7),
+(7,	14,	7),
+(7,	15,	7),
+(7,	16,	7),
+(7,	17,	7),
+(7,	18,	7),
+(7,	19,	7),
+(8,	20,	7),
+(8,	21,	7),
+(8,	22,	7),
+(8,	23,	7),
+(8,	24,	7),
+(8,	25,	7),
+(8,	26,	7),
+(8,	27,	7),
+(8,	28,	7),
+(8,	29,	7);
+
+insert into participan  values
+(1,	31,	9,	'gano'),
+(1,	32,	9,	'gano'),
+(1,	33,	9,	'gano'),
+(1,	34,	9,	'gano'),
+(1,	35,	9,	'gano'),
+(1,	36,	9,	'gano'),
+(1,	37,	9,	'gano'),
+(1,	38,	9,	'gano'),
+(1,	39,	9,	'gano'),
+(1,	40,	9,	'gano'),
+(1,	1,	9,	'gano'),
+(2,	41,	9,	'perdio'),
+(2,	42,	9,	'perdio'),
+(2,	43,	9,	'perdio'),
+(2,	44,	9,	'perdio'),
+(2,	45,	9,	'perdio'),
+(2,	46,	9,	'perdio'),
+(2,	47,	9,	'perdio'),
+(2,	48,	9,	'perdio'),
+(2,	49,	9,	'perdio'),
+(2,	50,	9,	'perdio'),
+(2,	51,	9,	'perdio'),
+(7,	9,	10,	'gano'),
+(7,	10,	10,	'gano'),
+(7,	11,	10,	'gano'),
+(7,	12,	10,	'gano'),
+(7,	13,	10,	'gano'),
+(7,	14,	10,	'gano'),
+(7,	15,	10,	'gano'),
+(7,	16,	10,	'gano'),
+(7,	17,	10,	'gano'),
+(7,	18,	10,	'gano'),
+(7,	19,	10,	'gano'),
+(8,	20,	10,	'perdio'),
+(8,	21,	10,	'perdio'),
+(8,	22,	10,	'perdio'),
+(8,	23,	10,	'perdio'),
+(8,	24,	10,	'perdio'),
+(8,	25,	10,	'perdio'),
+(8,	26,	10,	'perdio'),
+(8,	27,	10,	'perdio'),
+(8,	28,	10,	'perdio'),
+(8,	29,	10,	'perdio'),
+(8,	30,	10,	'perdio'),
+(7,	9,	11,	'gano'),
+(7,	10,	11,	'gano'),
+(7,	11,	11,	'gano'),
+(7,	12,	11,	'gano'),
+(7,	13,	11,	'gano'),
+(7,	14,	11,	'gano'),
+(7,	15,	11,	'gano'),
+(7,	16,	11,	'gano'),
+(7,	17,	11,	'gano'),
+(7,	18,	11,	'gano'),
+(7,	19,	11,	'gano'),
+(1,	31,	11,	'perdio'),
+(1,	32,	11,	'perdio'),
+(1,	33,	11,	'perdio'),
+(1,	34,	11,	'perdio'),
+(1,	35,	11,	'perdio'),
+(1,	36,	11,	'perdio'),
+(1,	37,	11,	'perdio'),
+(1,	38,	11,	'perdio'),
+(1,	39,	11,	'perdio'),
+(1,	40,	11,	'perdio'),
+(1,	1,	11,	'perdio'),
+(8,	20,	12,	'gano'),
+(8,	21,	12,	'gano'),
+(8,	22,	12,	'gano'),
+(8,	23,	12,	'gano'),
+(8,	24,	12,	'gano'),
+(8,	25,	12,	'gano'),
+(8,	26,	12,	'gano'),
+(8,	27,	12,	'gano'),
+(8,	28,	12,	'gano'),
+(8,	29,	12,	'gano'),
+(2,	41,	12,	'perdio'),
+(2,	42,	12,	'perdio'),
+(2,	43,	12,	'perdio'),
+(2,	44,	12,	'perdio'),
+(2,	45,	12,	'perdio'),
+(2,	46,	12,	'perdio'),
+(2,	47,	12,	'perdio'),
+(2,	48,	12,	'perdio'),
+(2,	49,	12,	'perdio'),
+(2,	50,	12,	'perdio'),
+(2,	51,	12,	'perdio'),
+(1,	31,	13,	'perdio'),
+(1,	32,	13,	'perdio'),
+(1,	33,	13,	'perdio'),
+(1,	34,	13,	'perdio'),
+(1,	35,	13,	'perdio'),
+(1,	36,	13,	'perdio'),
+(1,	37,	13,	'perdio'),
+(1,	38,	13,	'perdio'),
+(1,	39,	13,	'perdio'),
+(1,	40,	13,	'perdio'),
+(1,	1,	13,	'perdio'),
+(8,	20,	13,	'gano'),
+(8,	21,	13,	'gano'),
+(8,	22,	13,	'gano'),
+(8,	23,	13,	'gano'),
+(8,	24,	13,	'gano'),
+(8,	25,	13,	'gano'),
+(8,	26,	13,	'gano'),
+(8,	27,	13,	'gano'),
+(8,	28,	13,	'gano'),
+(8,	29,	13,	'gano'),
+(2,	41,	14,	'perdio'),
+(2,	42,	14,	'perdio'),
+(2,	43,	14,	'perdio'),
+(2,	44,	14,	'perdio'),
+(2,	45,	14,	'perdio'),
+(2,	46,	14,	'perdio'),
+(2,	47,	14,	'perdio'),
+(2,	48,	14,	'perdio'),
+(2,	49,	14,	'perdio'),
+(2,	50,	14,	'perdio'),
+(2,	51,	14,	'perdio'),
+(7,	9,	14,	'gano'),
+(7,	10,	14,	'gano'),
+(7,	11,	14,	'gano'),
+(7,	12,	14,	'gano'),
+(7,	13,	14,	'gano'),
+(7,	14,	14,	'gano'),
+(7,	15,	14,	'gano'),
+(7,	16,	14,	'gano'),
+(7,	17,	14,	'gano'),
+(7,	18,	14,	'gano'),
+(7,	19,	14,	'gano');
+
+insert into masivo values (8,'copa de clubes');
+insert into participan_masivo values
+(8,	1,	1,	3),
+(8,	1,	31,	3),
+(8,	1,	32,	3),
+(8,	1,	33,	3),
+(8,	1,	34,	3),
+(8,	1,	35,	3),
+(8,	1,	36,	3),
+(8,	1,	37,	3),
+(8,	1,	38,	3),
+(8,	1,	39,	3),
+(8,	1,	40,	3),
+(8,	2,	41,	4),
+(8,	2,	42,	4),
+(8,	2,	43,	4),
+(8,	2,	44,	4),
+(8,	2,	45,	4),
+(8,	2,	46,	4),
+(8,	2,	47,	4),
+(8,	2,	48,	4),
+(8,	2,	49,	4),
+(8,	2,	50,	4),
+(8,	2,	51,	4),
+(8,	7,	9,	1),
+(8,	7,	10,	1),
+(8,	7,	11,	1),
+(8,	7,	12,	1),
+(8,	7,	13,	1),
+(8,	7,	14,	1),
+(8,	7,	15,	1),
+(8,	7,	16,	1),
+(8,	7,	17,	1),
+(8,	7,	18,	1),
+(8,	7,	19,	1),
+(8,	7,	20,	1),
+(8,	8,	21,	2),
+(8,	8,	22,	2),
+(8,	8,	23,	2),
+(8,	8,	24,	2),
+(8,	8,	25,	2),
+(8,	8,	26,	2),
+(8,	8,	27,	2),
+(8,	8,	28,	2),
+(8,	8,	29,	2),
+(8,	8,	30,	2);
+
+insert into se_juega_por values
+(9,	8),
+(10,	8),
+(11,	8),
+(12,	8),
+(13,	8),
+(14,	8);
+
+
+
+alter table participa modify resultado enum('gano','empato','perdio') null;
+
+
+insert into usuario values
+(1,	'Pedro', 	'Sanchez',	'pepes@gmail.com'	,1,	'pedrosan'),
+(2,	'Adriana',	'Vazquez',	'adrivaz@outlook.com'	,2,	'adrivas15'),
+(3,	'Gerardo',	'Gonzalez',	'ggonza@hotmail.com'	,3,	'geragon29'),
+(4,	'Alberto' ,	'Perez',	'perezal@yahoo.com'	,4,	'perezalberto12');
+insert into usuario values
+(5,	'Gonzalo',	'Fernandez',	'Gfernandez@gmail.com'	,3,	'gfernandez'),
+(6,	'Martin',	'Suarez',	'msuarez@gamil.com'	,2,	'msuarez'),
+(7,	'Jose' ,	'Perez',	'jperez@gmail.com'	,3,	'jperez'),
+(8,	'Daniel',	'Gonzalez',	'dgonzalez@gmail.com'	,4,	'dgonzalez');
