@@ -223,10 +223,13 @@
 </value>
   </data>
   <data name="pbLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>703, 0</value>
+    <value>937, 0</value>
+  </data>
+  <data name="pbLogin.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="pbLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 38</value>
+    <value>45, 47</value>
   </data>
   <data name="pbLogin.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -247,14 +250,20 @@
   <data name="&gt;&gt;pbLogin.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="menuGestionUsuarios.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16.2pt, style=Bold</value>
+  </data>
   <data name="menuGestionUsuarios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 34</value>
+    <value>286, 42</value>
   </data>
   <data name="menuGestionUsuarios.Text" xml:space="preserve">
     <value>Gestion de usuarios</value>
   </data>
+  <data name="menuLogin.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16.2pt, style=Bold</value>
+  </data>
   <data name="menuLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 34</value>
+    <value>87, 42</value>
   </data>
   <data name="menuLogin.Text" xml:space="preserve">
     <value>Salir</value>
@@ -265,8 +274,11 @@
   <data name="menuContenedor.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 15.75pt, style=Bold</value>
   </data>
+  <data name="menuEventos.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16.2pt, style=Bold</value>
+  </data>
   <data name="menuEventos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 34</value>
+    <value>131, 42</value>
   </data>
   <data name="menuEventos.Text" xml:space="preserve">
     <value>Eventos</value>
@@ -275,10 +287,10 @@
     <value>0, 0</value>
   </data>
   <data name="menuContenedor.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 2, 0, 2</value>
+    <value>5, 2, 0, 2</value>
   </data>
   <data name="menuContenedor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>772, 38</value>
+    <value>1029, 46</value>
   </data>
   <data name="menuContenedor.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -305,13 +317,16 @@
     <value>74</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>8, 16</value>
   </data>
   <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>772, 450</value>
+    <value>1029, 554</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Principal Backoffice</value>

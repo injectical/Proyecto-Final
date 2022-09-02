@@ -50,14 +50,14 @@
             // 
             // menuGestionUsuarios
             // 
-            this.menuGestionUsuarios.Name = "menuGestionUsuarios";
             resources.ApplyResources(this.menuGestionUsuarios, "menuGestionUsuarios");
+            this.menuGestionUsuarios.Name = "menuGestionUsuarios";
             this.menuGestionUsuarios.Click += new System.EventHandler(this.menuGestionUsuarios_Click);
             // 
             // menuLogin
             // 
-            this.menuLogin.Name = "menuLogin";
             resources.ApplyResources(this.menuLogin, "menuLogin");
+            this.menuLogin.Name = "menuLogin";
             this.menuLogin.Click += new System.EventHandler(this.menuLogin_Click);
             // 
             // menuContenedor
@@ -72,8 +72,8 @@
             // 
             // menuEventos
             // 
-            this.menuEventos.Name = "menuEventos";
             resources.ApplyResources(this.menuEventos, "menuEventos");
+            this.menuEventos.Name = "menuEventos";
             this.menuEventos.Click += new System.EventHandler(this.menuEventos_Click);
             // 
             // Principal

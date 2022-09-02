@@ -1,0 +1,48 @@
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\bin\x64\Debug\WindowsFormsApp10.exe.config
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\bin\x64\Debug\WindowsFormsApp10.exe
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\bin\x64\Debug\WindowsFormsApp10.pdb
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\bin\x64\Debug\fr-BI\WindowsFormsApp10.resources.dll
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\bin\x64\Debug\Newtonsoft.Json.dll
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\bin\x64\Debug\StreamJsonRpc.dll
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\bin\x64\Debug\Newtonsoft.Json.xml
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\bin\x64\Debug\es\StreamJsonRpc.resources.dll
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csprojAssemblyReference.cache
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\Interop.ADODB.dll
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csproj.ResolveComReference.cache
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Eventos.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.GestionDeUsuarios.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.GestionDeEventos.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Login.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Principal.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Properties.Resources.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Principal.fr-BI.resources
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csproj.GenerateResource.cache
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csproj.CoreCompileInputs.cache
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\fr-BI\WindowsFormsApp10.resources.dll
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csproj.CopyComplete
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.exe
+C:\Users\bplim\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.pdb
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\bin\x64\Debug\WindowsFormsApp10.exe.config
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\bin\x64\Debug\WindowsFormsApp10.exe
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\bin\x64\Debug\WindowsFormsApp10.pdb
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\bin\x64\Debug\fr-BI\WindowsFormsApp10.resources.dll
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\bin\x64\Debug\Newtonsoft.Json.dll
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\bin\x64\Debug\StreamJsonRpc.dll
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\bin\x64\Debug\Newtonsoft.Json.xml
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\bin\x64\Debug\es\StreamJsonRpc.resources.dll
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csprojAssemblyReference.cache
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\Interop.ADODB.dll
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csproj.ResolveComReference.cache
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Eventos.resources
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.GestionDeUsuarios.resources
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.GestionDeEventos.resources
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Login.resources
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Principal.resources
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Properties.Resources.resources
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Principal.fr-BI.resources
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csproj.GenerateResource.cache
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csproj.CoreCompileInputs.cache
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\fr-BI\WindowsFormsApp10.resources.dll
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csproj.CopyComplete
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.exe
+D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.pdb

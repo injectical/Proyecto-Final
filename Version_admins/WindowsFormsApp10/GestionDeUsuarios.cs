@@ -12,6 +12,7 @@ namespace WindowsFormsApp10
 {
     public partial class GestionDeUsuarios : Form
     {
+        int posicion;
         public GestionDeUsuarios()
         {
             InitializeComponent();
@@ -24,10 +25,10 @@ namespace WindowsFormsApp10
 
         private void GestionDeUsuarios_Load(object sender, EventArgs e)
         {
-            
+            btnValidar.Visible = false;
         }
 
-        private void rdbVistaGeneral_CheckedChanged(object sender, EventArgs e)
+        private void rbtVistaGeneral_CheckedChanged(object sender, EventArgs e)
         {
             Program.frmgestiondeusuarios.dataGridView1.DataSource = Program.listarUsuarios("select * from usuario where rol=3;");
         }
@@ -37,21 +38,33 @@ namespace WindowsFormsApp10
             Program.frmgestiondeusuarios.dataGridView1.DataSource = Program.listarUsuarios("select * from usuario where rol=2;");
         }
 
-        private void rbUsuariosPagos_CheckedChanged(object sender, EventArgs e)
+        private void rbtUsuariosPagos_CheckedChanged(object sender, EventArgs e)
         {
             Program.frmgestiondeusuarios.dataGridView1.DataSource = Program.listarUsuarios("select * from usuario where rol=4;");
         }
 
-        private void rbSuperUsuario_CheckedChanged(object sender, EventArgs e)
+        private void rbtSuperUsuario_CheckedChanged(object sender, EventArgs e)
         {
             Program.frmgestiondeusuarios.dataGridView1.DataSource = Program.listarUsuarios("select * from usuario where rol=1;");
         }
 
+        private void rbtAutorizarUsuario_CheckedChanged(object sender, EventArgs e)
+        {
+            Program.frmgestiondeusuarios.dataGridView1.DataSource = Program.listarUsuarios("select * from usuario_provisorio");
+
+        }
+
+        private void rbtAutorizarMembresía_CheckedChanged(object sender, EventArgs e)
+        {
+            Program.frmgestiondeusuarios.dataGridView1.DataSource = Program.listarUsuarios("select * from usuario_espera_pago");
+            btnValidar.Visible = true;
+        }
         private void btncrear_Click(object sender, EventArgs e)
 
         {
 
-            string privilegios="";
+
+            string privilegios ="";
             string nombre, apellido, correo, nombreClave,sql;
             int Rol=0;
             bool validar = true;
@@ -118,49 +131,21 @@ namespace WindowsFormsApp10
             }
 
             if (validar && validarRol) {
+                
+                Usuario nuevo = new Usuario();
+                bool res;
+                int a;
+                string str = txtid.Text;
+                res = int.TryParse(str, out a);
+                nuevo.id = a;
+                nuevo.nombre = txtNombre.Text;
+                nuevo.apellido = txtApellido.Text;
+                nuevo.email = txtcorreo.Text;
+                nuevo.rol = Rol;
+                nuevo.nombreUsuario = txtNombreDeUSuarioClave.Text;
+                nuevo.contraseña = txtContraseña.Text;
 
-                //se crea usuario en mysql con el nombre_clave
-
-                string CrearUsuario = "CREATE USER '" + nombreClave + "'@'localhost' IDENTIFIED BY '1234';";
-
-                try
-                {
-
-                    Program.conexion.Execute(CrearUsuario, out contFilas);
-                }
-                catch
-                {
-                    MessageBox.Show("error al crear el usuario ");
-                    return;
-                }
-                //se ejecuta la asignacion de privilegios para el usuario 
-                try
-                {
-
-                    Program.conexion.Execute(privilegios, out contFilas);
-                    Program.conexion.Execute("FLUSH PRIVILEGES;",out contFilas);
-                }
-                catch
-                {
-                    MessageBox.Show("error al ingresar los privilegios");
-                    return;
-                }
-
-
-                sql = "insert into usuario (NOMBRE,APELLIDO,EMAIL,rol,nombre_clave) values ('" + nombre + "','" + apellido + "','" + correo + "'," + Rol + ",'" + nombreClave + "');";
-
-               //se reliza insert en la tabla usuario
-
-                try
-                {
-
-                    Program.conexion.Execute(sql, out contFilas);
-                }
-                catch
-                {
-                    MessageBox.Show("Los datos no fueron ingresados correctamente ");
-                    return;
-                }
+                nuevo.Guardar(true);
 
 
 
@@ -178,22 +163,9 @@ namespace WindowsFormsApp10
             
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        
 
-        }
-
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //cuando se hace doble clic sobre uno de los atributos de una tupla
-            //se cargan los datos de la tupla a su correspondiente text box
-            txtApellido.Text = dataGridView1.CurrentRow.Cells["APELLIDO"].Value.ToString();
-            txtNombre.Text = dataGridView1.CurrentRow.Cells["NOMBRE"].Value.ToString();
-            txtcorreo.Text = dataGridView1.CurrentRow.Cells["EMAIL"].Value.ToString();
-            txtrol.Text = dataGridView1.CurrentRow.Cells["rol"].Value.ToString();
-            txtNombreDeUSuarioClave.Text = dataGridView1.CurrentRow.Cells["nombre_clave"].Value.ToString();
-            txtid.Text = dataGridView1.CurrentRow.Cells["ID_USUARIO"].Value.ToString();
-        }
+       
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -308,6 +280,41 @@ namespace WindowsFormsApp10
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Program.LimpiarCampos();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            posicion = dataGridView1.CurrentRow.Index;
+
+            if (rbtAutorizarMembresía.Checked)
+            {
+                txtNombreDeUSuarioClave.Text = dataGridView1[0, posicion].Value.ToString();
+            }
+            else
+            {
+                posicion = dataGridView1.CurrentRow.Index;
+
+                txtid.Text = dataGridView1[0, posicion].Value.ToString();
+                txtNombre.Text = dataGridView1[1, posicion].Value.ToString();
+                txtApellido.Text = dataGridView1[2, posicion].Value.ToString();
+                txtcorreo.Text = dataGridView1[3, posicion].Value.ToString();
+                txtrol.Text = dataGridView1[4, posicion].Value.ToString();
+                txtNombreDeUSuarioClave.Text = dataGridView1[5, posicion].Value.ToString();
+                txtContraseña.Text = dataGridView1[6, posicion].Value.ToString();
+
+            }
+
+        }
+        //VALIDA SUSCRIPCIÓN
+        private void btnValidar_Click(object sender, EventArgs e)
+        {
+            Usuario_Pago pago = new Usuario_Pago();
+
+            pago.nombreUsuario = txtNombreDeUSuarioClave.Text;
+            pago.fechaDePago = dtpFecha.DataBindings.ToString();
+            
+            pago.GuardarMembresia();
+            txtNombreDeUSuarioClave.Clear();
         }
     }
 }

@@ -133,6 +133,7 @@ namespace WindowsFormsApp10
             frmgestiondeusuarios.txtApellido.Clear();
             frmgestiondeusuarios.txtcorreo.Clear();
             frmgestiondeusuarios.txtNombreDeUSuarioClave.Clear();
+            frmgestiondeusuarios.txtContraseña.Clear();
 
 
         }
