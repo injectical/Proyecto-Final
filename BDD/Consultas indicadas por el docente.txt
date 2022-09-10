@@ -1,0 +1,92 @@
+1) En cuales eventos participa un determinado equipo?
+
+(select evento.nombre from evento,equipo,participan,vs 
+ where  evento.id_evento=participan.id_evento_vs 
+	and participan.id_evento_vs=vs.id_evento_vs 
+	and equipo.nombre='nacional' 
+	and equipo.id_equipo=participan.id_equipo)
+    union
+    (select evento.nombre from evento,equipo,participan_masivo,masivo
+    where evento.id_evento=participan_masivo.id_evento_mas and participan_masivo.id_evento_mas=masivo.id_evnt_mas
+    and equipo.nombre='nacional'
+    and equipo.id_equipo=participan_masivo.id_equipo);
+ 
+ 
+2) Cual es el resultado de un determinado equipo en una fecha determinada? (el equipo tiene un partido en esa fecha).
+
+select DISTINCT  p1 'LOCAL' ,p2 VISITANTE ,result_p1 'RESULTADO LOCAL',result_p2  'RESULTADO VISITANTE'
+from vs,evento,equipo,participan
+where evento.id_evento=vs.id_evento_vs 
+and  evento.fecha_inicio='2022-02-01' 
+and vs.id_evento_vs=participan.id_evento_vs 
+and equipo.id_equipo=participan.id_equipo
+and equipo.nombre='nacional';
+
+
+3)Listado de integrantes de un equipo sus datos y a que pais pertenece.
+
+select D.nombre, D.apellido, D.pais,posicion,fecha_fichaje 
+from deportista D,equipo E,pertenece P,deportista_group DG 
+where D.id_deportista=DG.id_depr_grup
+ and DG.id_depr_grup=P.id_depor_grup 
+ and E.id_equipo=P.id_equipo
+ and E.nombre='nacional';
+
+4)Cuantos partidos a ganado un equipo
+(select count(DISTINCT id_evento_vs) 'cantidad de partidos ganados' from participan,equipo
+ where participan.id_evento_vs in 
+(select vs.id_evento_vs  from vs 
+where vs.id_evento_vs in (select id_evento from evento where fecha_inicio between '2022/02/01' and '2022/02/30')) 
+and equipo.id_equipo=participan.id_equipo 
+and equipo.nombre='Nacional' 
+and participan.resultado='gano' );
+
+
+Cuantos usuarios existen segun cada categoria?
+
+select rol 'tipos de usuario', count(rol) Cantidad  from usuario group by rol;
+Consultas Algebra relacional
+
+1 ) 
+ 
+Π evento.nombre (σ  evento.id_evento=participan.id_evento_vs 
+	and participan.id_evento_vs=vs.id_evento_vs 
+	and equipo.nombre='nacional' 
+	and equipo.id_equipo=participan.id_equipo (evento,equipo,participan,vs ))  
+
+Ų
+
+Π evento.nombre (σ  evento.id_evento=participan_masivo.id_evento_mas and participan_masivo.id_evento_mas=masivo.id_evnt_mas
+    and equipo.nombre='nacional'
+    and equipo.id_equipo=participan_masivo.id_equipo ( evento,equipo,participan_masivo,masivo )) 
+
+
+2)
+
+Π  DISTINCT  p1 'LOCAL' ,p2 VISITANTE ,result_p1 'RESULTADO LOCAL',result_p2  'RESULTADO VISITANTE'
+( evento.id_evento=vs.id_evento_vs 
+and  evento.fecha_inicio='2022-02-01' 
+and vs.id_evento_vs=participan.id_evento_vs 
+and equipo.id_equipo=participan.id_equipo
+and equipo.nombre='nacional ( vs,evento,equipo,participan))
+
+
+
+
+
+
+
+
+
+3)
+  Π D.nombre, D.apellido, D.pais,posicion,fecha_fichaje
+(σ D.id_deportista=DG.id_depr_grup
+ and DG.id_depr_grup=P.id_depor_grup 
+ and E.id_equipo=P.id_equipo
+ and E.nombre='nacional' (deportista D,equipo E,pertenece P,deportista_group DG ))
+
+4)
+
+(Π count(DISTINCT id_evento_vs) 'cantidad de partidos ganados' σ rticipan.id_evento_vs in 
+(Π  vs.id_evento_vs  σ  vs.id_evento_vs in
+(Π  id_evento (σ fecha_inicio between '2022/02/01' and '2022/02/30' )) (vs )) participan,equipo )
