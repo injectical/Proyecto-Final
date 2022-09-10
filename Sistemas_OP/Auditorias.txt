@@ -1,0 +1,40 @@
+#!/bin/bash
+
+clear
+
+while [ "$opc" !=  "0" ]
+
+do
+
+clear
+
+echo -e "\n##################Registro de loging##############"
+echo -e "\n1-ver usuarios conectados al sistema"
+echo -e "\n2-Usuarios que estuvieron en el sistema"
+echo -e "\n3-intentos fallidos de conexion"
+echo -e "\0- Salir"
+read -p "Ingrese una opcion: " opc
+
+case $opc in 
+
+1)clear 
+	who -Huw	
+		read -p "Presione una tecla para volver" ;;
+
+2) clear 
+	last -a 
+		read -p "Presione una tecla para volver";;
+
+3)clear 
+	lastb
+		read -p "Presione una tecla para volver";;
+
+0) exit;;
+
+*) echo " $opc no es una opcion valida"
+	read -p "Presione una opcion para volver";;
+
+esac
+done 
+
+

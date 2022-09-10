@@ -1,0 +1,3 @@
+
+
+0 1 * * * /home/ScriptsParaRespaldos/respaldoBasededatos.sh 
