@@ -1,6 +1,6 @@
-create database sport360Prueba;
+create database sport360;
 
-use sport360Prueba;
+use sport360;
 
 create table disciplina(
 id_disciplina int auto_increment,
@@ -162,7 +162,7 @@ id_evento_vs int not null,
 resultado enum('gano','empato','perdio') null,
 primary key(id_equipo,id_depor_grup,id_evento_vs), 
 foreign key (id_equipo) references equipo (id_equipo),
-foreign key (id_depor_grup) references deportista_group(id_depr_grup),
+foreign key (id_depor_grup) references deportista_grup(id_depr_grup),
 foreign key (id_evento_vs) references vs (id_evento_vs)
 );
 
@@ -260,7 +260,7 @@ primary key (id_evento_mas,id_equipo,id_depor_grup),
 foreign key (id_evento_mas) references masivo(id_evnt_mas)on delete cascade 
 on update cascade,
 foreign key (id_equipo) references equipo(id_equipo),
-foreign key (id_depor_grup) references deportista_group(id_depr_grup)
+foreign key (id_depor_grup) references deportista_grup(id_depr_grup)
 on delete cascade 
 on update cascade
 
@@ -278,3 +278,21 @@ foreign key (id_depor_individual) references deportista_individual(id_depr_indiv
 on update cascade
 
 );
+/*se va a usra para colocar en espera a los usuarios que quieran realizar el pago*/
+create table usuario_espera_pago(
+nombre_clave varchar(50) not null,
+primary key (nombre_clave)
+);
+
+
+CREATE TABLE `usuario_provisorio` (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  nombre varchar(45) NOT NULL,
+  apellido varchar(45) NOT NULL,
+  email varchar(45) NOT NULL,
+  rol varchar(45) NOT NULL,
+  nombre_clave varchar(45) NOT NULL,
+  contrasena varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
