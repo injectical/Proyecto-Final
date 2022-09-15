@@ -1,3 +1,4 @@
 
 
-0 1 * * * /home/ScriptsParaRespaldos/respaldoBasededatos.sh 
+0 1 * * 1-6 /home/ScriptsParaRespaldos/respaldodiarioIncremental.sh
+0 1 * * 0 /home/ScriptsParaRespaldos/respaldoSemanal.sh 

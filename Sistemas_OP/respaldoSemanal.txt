@@ -1,0 +1,35 @@
+#!/bin/bash
+fecha=(date +"%d-%m-%y")
+
+mkadir /etc/home/respaldototal$fecha
+
+cp /etc/passwd /etc/passwdBackup 
+gzip /etc/passwdBackup 
+mv /etc/passwdBackup.gz  /etc/home/respaldototal$fecha
+  
+#Respaldo /etc/group 
+cp /etc/group /etc/groupBackup 
+gzip /etc/groupBackup 
+mv /etc/groupBackup.gz  /etc/home/respaldototal$fecha
+   
+#Respaldo /etc/shadow 
+cp /etc/shadow /etc/shadowBackup 
+gzip /etc/shadowBackup 
+mv /etc/shadowBackup.gz  /etc/home/respaldototal$fecha
+
+#Respaldo /etc/login.defs 
+cp /etc/login.defs /etc/login.defsBackup 
+gzip /etc/login.defsBackup 
+mv /etc/login.defsBackup.gz   /etc/home/respaldototal$fecha
+
+mysqldump -u root -p contrasña  sport360 > /home/respaldodiario$fecha/sport360.sql
+
+
+mt -t /dev/nst0 rewind
+mt -t /dev/nst0 eod
+tar -czf /dev/nst0 -T /etc/home/respaldototal$fecha
+mt -t /dev/nst0 rewind
+
+
+#se elimina el directorio 
+rm -r   /etc/home/respaldototal$fecha
