@@ -1,0 +1,48 @@
+#!/bin/bash
+
+clear 
+while [ "$opc !=0 ]
+
+do 
+
+echo "0- Salir"
+echo "1- Alta de usuario"
+echo "2- Modificacion de usuario"
+echo "3- Eliminar usuario"
+read -p "Ingrese opcion: " opc
+
+case $opc in
+
+1) read -p "Ingrese el nombre de usuario: " nombre
+   #Chequea que el usuario no exista para dar paso a useradd y passwd
+   cat /etc/passwd | grep "$nombre" > /dev/null existe=0
+     
+     if [ $existe -eq 0 ]
+     then
+        echo El usuario ya existe
+     else
+	useradd $nombre
+	passwd $nombre
+
+     fi
+;;
+
+2) read -p "Ingrese el nombre de usuario: " nombre
+   read -p "Ingrese el nombre nuevo: " nuevoNombre
+   usermod -l $nuevoNombre $nombre
+   passwd $nuevoNombre
+;;
+
+3) read -p "Ingrese el nombre de usuario: " nombre
+   userdel -rf $nombre
+;;
+
+0) exit
+;;
+
+*) echo "opcion incorrecta"
+;;
+
+esac
+
+done
