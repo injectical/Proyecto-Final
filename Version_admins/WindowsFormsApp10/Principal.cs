@@ -31,6 +31,7 @@ namespace WindowsFormsApp10
         {
             menuEventos.Enabled = false;
             menuGestionUsuarios.Enabled = false;
+            menuStripGestionDetalles.Enabled = false;
            // Program.frmPrincipal.pcbImagen.Visible = false;
 
 
@@ -46,7 +47,11 @@ namespace WindowsFormsApp10
 
         private void menuLogin_Click(object sender, EventArgs e)
         {
-            Program.conexion.Close();
+            if (Program.conexion.State == 1)
+            {
+                Program.conexion.Close();
+            }
+            
             this.Close();
         }
 
@@ -64,10 +69,26 @@ namespace WindowsFormsApp10
 
         private void menuEventos_Click(object sender, EventArgs e)
         {
-
+            if (Program.frmgestionEventos != null)
+            {
+                Program.frmgestionEventos.Close();
+            }
+            if (Program.frmgestionDedetalles!=null)
+            {
+                Program.frmgestionDedetalles.Close();
+            }
+            if (Program.frmgestiondeusuarios != null)
+            {
+                Program.frmgestiondeusuarios.Close();
+            }
+            
             Program.frmgestionEventos = new GestionDeEventos();
             Program.frmgestionEventos.MdiParent = this;
             Program.frmgestionEventos.Show();
+            
+           
+
+            
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -81,9 +102,61 @@ namespace WindowsFormsApp10
 
         private void menuGestionUsuarios_Click(object sender, EventArgs e)
         {
+            if (Program.frmgestiondeusuarios != null)
+            {
+                Program.frmgestiondeusuarios.Close();
+            }
+            if (Program.frmEventos != null)
+            {
+                Program.frmEventos.Close();
+            }
+            if (Program.frmgestionDedetalles !=null) 
+            {
+                Program.frmgestionDedetalles.Close();
+            }
+
+            if (Program.frmgestionEventos != null)
+            {
+                Program.frmgestionEventos.Close();
+            }
             Program.frmgestiondeusuarios = new GestionDeUsuarios();
             Program.frmgestiondeusuarios.MdiParent = this;
             Program.frmgestiondeusuarios.Show();
+            
+        }
+
+        private void gestionDetallesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void gestionDeDetallesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Program.frmgestiondeusuarios != null)
+            {
+                Program.frmgestiondeusuarios.Close();
+            }
+            if (Program.frmEventos != null)
+            {
+                Program.frmEventos.Close();
+            }
+            if (Program.frmgestionDedetalles != null)
+            {
+                Program.frmgestionDedetalles.Close();
+            }
+
+            if (Program.frmgestionEventos != null)
+            {
+                Program.frmgestionEventos.Close();
+            }
+
+            Program.frmgestionDedetalles = new GestionDetalles();
+            Program.frmgestionDedetalles.MdiParent = this;
+            Program.frmgestionDedetalles.Show();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -34,8 +34,12 @@
             this.menuLogin = new System.Windows.Forms.ToolStripMenuItem();
             this.menuContenedor = new System.Windows.Forms.MenuStrip();
             this.menuEventos = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStripGestionDetalles = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogin)).BeginInit();
             this.menuContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pbLogin
@@ -67,7 +71,8 @@
             this.menuContenedor.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuEventos,
             this.menuGestionUsuarios,
-            this.menuLogin});
+            this.menuLogin,
+            this.menuStripGestionDetalles});
             this.menuContenedor.Name = "menuContenedor";
             // 
             // menuEventos
@@ -76,12 +81,34 @@
             this.menuEventos.Name = "menuEventos";
             this.menuEventos.Click += new System.EventHandler(this.menuEventos_Click);
             // 
+            // menuStripGestionDetalles
+            // 
+            this.menuStripGestionDetalles.Name = "menuStripGestionDetalles";
+            resources.ApplyResources(this.menuStripGestionDetalles, "menuStripGestionDetalles");
+            this.menuStripGestionDetalles.Click += new System.EventHandler(this.gestionDeDetallesToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Image = global::WindowsFormsApp10.Properties.Resources.imagen;
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Name = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
             // Principal
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::WindowsFormsApp10.Properties.Resources.pngtree_sports_motion_silhouette_sports_poster_image_14841;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pbLogin);
             this.Controls.Add(this.menuContenedor);
             this.IsMdiContainer = true;
@@ -92,6 +119,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbLogin)).EndInit();
             this.menuContenedor.ResumeLayout(false);
             this.menuContenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,6 +131,9 @@
         public System.Windows.Forms.ToolStripMenuItem menuLogin;
         private System.Windows.Forms.MenuStrip menuContenedor;
         public System.Windows.Forms.ToolStripMenuItem menuEventos;
+        public System.Windows.Forms.ToolStripMenuItem menuStripGestionDetalles;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

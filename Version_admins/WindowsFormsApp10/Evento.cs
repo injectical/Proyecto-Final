@@ -18,37 +18,32 @@ namespace WindowsFormsApp10
         protected string _pais;
         protected string _fecha;
         protected string _hora;
-        protected string _inicio;
-        protected string _final;
+        protected byte _inicio;
+        protected byte _final;
         protected string _resultado;
         protected ADODB.Connection _conexion;
 
 
         //se crea constructor y ya se la adjudica valores false a inicio y final
-        public Evento(int id, string nombre, string pais, string fecha, string hora, string inicio, string final, string resultado, ADODB.Connection conexion)
+        public Evento( string nombre, string pais, string fecha, string hora, string resultado, ADODB.Connection conexion)
         {
-            _id = id;
+            
             _nombre = nombre;
             _pais = pais;
             _fecha = fecha;
             _hora = hora;
-            _inicio = inicio;
-            _final = final;
+            _inicio = 0;
+            _final = 0;
             _resultado = resultado;
             _conexion = conexion;
 
         }
         public Evento()
         {
-            _id = 0;
-            _nombre = "";
-            _pais = "";
-            _fecha = "";
-            _hora = "";
-            _inicio = "false";
-            _final = "false";
-            _resultado = "";
-            _conexion = new ADODB.Connection();
+            _inicio = 0;
+            _final = 0;
+
+
 
         }
 
@@ -117,7 +112,7 @@ namespace WindowsFormsApp10
 
         }
 
-        public string inicio
+        public byte inicio
         {
             get
             {
@@ -130,7 +125,7 @@ namespace WindowsFormsApp10
             }
         }
 
-        public string final
+        public byte final
         {
             get
             {
@@ -172,27 +167,48 @@ namespace WindowsFormsApp10
 
 
 
-        public DataTable Listar()
+       public DataTable ListarEventos(bool tipo)
         {
+            string sql;
+           object contFilas;
+            if (tipo)
+            {
+                 sql = "select id_evento as id,nombre,pais," +
+                    " date_format(fecha_inicio, '%d-%m-%Y') " +
+                    "as fecha,hora_de_inicio as hora,resultado,inicio,final from evento;";
+            }
+            else
+            {
+                sql = "select id_evento as id,nombre,pais," +
+                    " date_format(fecha_inicio, '%d-%m-%Y') " +
+                    "as fecha,hora_de_inicio as hora,resultado,inicio,final from evento where nombre='"+_nombre+"' and fecha_inicio='"+_fecha+"';";
 
-            object contFilas;
-            string sql = "select * from evento";
-            ADODB.Recordset rs;
-            _conexion = Program.conexion;
-            rs = _conexion.Execute(sql, out contFilas);
-            DataTable dt = new DataTable();
-            OleDbDataAdapter adapter = new System.Data.OleDb.OleDbDataAdapter();
-            adapter.Fill(dt, rs);
+            }
+            ADODB.Recordset rs= new ADODB.Recordset() ;
+            try
+            {
+                rs =_conexion.Execute(sql, out contFilas);
+            }
+            catch
+            {
+                throw;
+            }
+             DataTable dt = new DataTable();
+                     
+            OleDbDataAdapter adapter = new OleDbDataAdapter();
+            adapter.Fill(dt,rs );
+
             return dt;
-
+            
         }
 
         public byte Guardar(bool alta)
         {
+
             byte resultado = 0;
             string sql;
             object contFilas;
-            _conexion = Program.conexion;
+      
             if (_conexion.State == 0)
             {
                 resultado = 1; //conexion cerrada
@@ -203,12 +219,12 @@ namespace WindowsFormsApp10
 
                 if (alta)
                 {
-                    sql = "insert into evento (pais,nombre,fecha_inicio,hora_de_inicio,inicio,final,resultado) values ('" + _pais + "','" + _nombre + "','" + _fecha + "','" + _hora + "'," + _inicio + "," + _final + ",'" + _resultado + "')";
+                    sql = "insert into evento (pais,nombre,fecha_inicio,hora_de_inicio,inicio,final) values ('" + _pais + "','" + _nombre + "','" + _fecha + "','" + _hora + "'," + _inicio + "," + _final + ")";
 
                 }
                 else
                 {
-                    sql = "update evento set nombre ='" + _nombre + "',pais='" + _pais + "',fecha_inicio='" + _fecha + "',hora_de_inicio='" + _hora + "',inicio=" + _inicio + ",final=" + _final + ",resultado='" + _resultado + "' where id_evento= " + _id + ";";
+                    sql = "update evento set inicio=" + _inicio + ",final=" + _final + ",resultado='" + _resultado + "',fecha_inicio='"+_fecha+"',hora_de_inicio='"+_hora+"' where id_evento= " + _id + ";";
 
                 }
                 try
@@ -217,25 +233,21 @@ namespace WindowsFormsApp10
                 }
                 catch
                 {
-                    return (2);
+                    return (2);//error al insertar o actualizar evento
                 }
             }
-            return (3);
+            return resultado;// todo ok
 
         }
 
-        /*
-         
-            SE PRESENTARON UNA SERIE DE PROBLEMAS PARA PONER TODAS LAS SENTENCIAS EN UN MISMO METODO
-        POR ESTE MOTIVO SE CREO EL METODO Eliminar()
-        */
+       
         public byte Eliminar()
         {
 
             byte resultado = 0;
             string sql1,sql2;
             object contFilas;
-            _conexion = Program.conexion;
+           
             if (_conexion.State == 0)
             {
                 resultado = 1; //conexion cerrada
@@ -243,24 +255,96 @@ namespace WindowsFormsApp10
             }
             else
             {
-                sql1 = "delete from corresponde where id_evento=" + _id + ";";
-
+                
                 sql2 = "delete from evento where id_evento=" + _id + ";";
-                _conexion.Execute(sql1, out contFilas);
-                _conexion.Execute(sql2, out contFilas);
-
-
-
+                
                 try
                 {
+                    _conexion.Execute(sql2, out contFilas);
                 }
                 catch
                 {
-                    return (2);
+                    return (2);//error al eliminar evento
                 }
             }
 
-            return (3);
+            return resultado;//todo ok
+        }
+
+        public DataTable ListarEventoResumen()
+        {
+            
+            string sql = "select id_evento as id,nombre," +
+                   " date_format(fecha_inicio, '%d-%m-%Y') " +
+                   "as fecha from evento where nombre='"+_nombre+"' and fecha_inicio='"+_fecha+"';";
+            object contFilas;
+
+            ADODB.Recordset rs = new ADODB.Recordset();
+            try
+            {
+                rs = _conexion.Execute(sql, out contFilas);
+            }
+            catch
+            {
+                throw;
+            }
+            DataTable dt = new DataTable();
+
+            OleDbDataAdapter adapter = new OleDbDataAdapter();
+            adapter.Fill(dt, rs);
+
+            return dt;
+
+
+        }
+
+        public DataTable ListarDetalles()
+        {
+            object contFilas;
+            string sql = "select * from detalles;";
+            ADODB.Recordset rs = new ADODB.Recordset();
+
+            try
+            {
+                rs = _conexion.Execute(sql, out contFilas);
+            }
+            catch
+            {
+                throw;
+            }
+            DataTable dt = new DataTable();
+
+            OleDbDataAdapter adapter = new OleDbDataAdapter();
+            adapter.Fill(dt, rs);
+
+            return dt;
+
+        }
+
+        public DataTable BuscarDetallesDeevento()
+        {
+            string sql = "select tiene.id_detalles as ID ,evento.nombre as Evento,detalles.nombre_det as 'nombre del detalle',tiene.descripcion as descripcion" +
+                " from evento, tiene, detalles where detalles.id_detalles = tiene.id_detalles " +
+                "and evento.id_evento = tiene.id_evento and evento.nombre = '" + _nombre + "' and evento.fecha_inicio = '" + _fecha + "'; ";
+            object contFilas;
+            ADODB.Recordset rs;
+            try
+            {
+                rs = _conexion.Execute(sql, out contFilas);
+            }
+            catch
+            {
+
+                throw;
+            }
+
+            DataTable dt = new DataTable();
+
+            OleDbDataAdapter adapter = new OleDbDataAdapter();
+            adapter.Fill(dt, rs);
+
+            return dt;
+
         }
 
 

@@ -12,7 +12,7 @@ namespace WindowsFormsApp10
 {
     public partial class GestionDeUsuarios : Form
     {
-        int posicion;
+       
         public GestionDeUsuarios()
         {
             InitializeComponent();
@@ -25,136 +25,219 @@ namespace WindowsFormsApp10
 
         private void GestionDeUsuarios_Load(object sender, EventArgs e)
         {
+           
+            btnModificar.Visible = false;
             btnValidar.Visible = false;
+            btncrear.Visible = false;
+            btnEliminar.Visible = false;
+            btnDarDeAltaUsEsp.Visible = false;
+            
+                    
+            switch (Program.chequerTablaUSerProv())
+            {
+                    
+                case 2:
+                    MessageBox.Show("error al chequear la tabla de usuarios Provisorios");
+                    break;
+                case 3:
+                    btnValidar.Visible = true;
+                    btnDarDeAltaUsEsp.Visible = true;
+                    break;
+                case 4:
+                    btnDarDeAltaUsEsp.Visible = true;
+                    break;
+                case 5:
+                    btnValidar.Visible = true;
+                    break;
+            }
+           
+
         }
 
         private void rbtVistaGeneral_CheckedChanged(object sender, EventArgs e)
+
         {
-            Program.frmgestiondeusuarios.dataGridView1.DataSource = Program.listarUsuarios("select * from usuario where rol=3;");
+            Usuario usuario = new Usuario();
+            usuario.conexion = Program.conexion;
+            usuario.rol = 3;
+            try
+            {
+                dataGridView1.DataSource = usuario.Filtrar();
+            }
+            catch
+            {
+                MessageBox.Show("Error al obtener usuarios");
+            }
+            usuario = null;
         }
 
         private void rbtVistaUsuariosadm_CheckedChanged(object sender, EventArgs e)
         {
-            Program.frmgestiondeusuarios.dataGridView1.DataSource = Program.listarUsuarios("select * from usuario where rol=2;");
+            Usuario usuario = new Usuario();
+            usuario.conexion = Program.conexion;
+            usuario.rol = 2;
+            try
+            {
+                dataGridView1.DataSource = usuario.Filtrar();
+            }
+            catch
+            {
+                MessageBox.Show("Error al obtener usuarios");
+            }
+            usuario = null;
         }
 
         private void rbtUsuariosPagos_CheckedChanged(object sender, EventArgs e)
         {
-            Program.frmgestiondeusuarios.dataGridView1.DataSource = Program.listarUsuarios("select * from usuario where rol=4;");
+            Usuario usuario = new Usuario();
+            usuario.conexion = Program.conexion;
+            usuario.rol = 4;
+           
+            try
+            {
+                dataGridView1.DataSource = usuario.Filtrar();
+            }
+            catch
+            {
+                MessageBox.Show("Error al obtener usuarios");
+            }
+            usuario = null;
         }
 
         private void rbtSuperUsuario_CheckedChanged(object sender, EventArgs e)
         {
-            Program.frmgestiondeusuarios.dataGridView1.DataSource = Program.listarUsuarios("select * from usuario where rol=1;");
+            Usuario usuario = new Usuario();
+            usuario.conexion = Program.conexion;
+            usuario.rol = 1;
+           
+            try
+            {
+                dataGridView1.DataSource = usuario.Filtrar();
+            }
+            catch
+            {
+                MessageBox.Show("Error al obtener usuarios");
+            }
+            usuario = null;
         }
 
         private void rbtAutorizarUsuario_CheckedChanged(object sender, EventArgs e)
         {
-            Program.frmgestiondeusuarios.dataGridView1.DataSource = Program.listarUsuarios("select * from usuario_provisorio");
+            //dataGridView1.DataSource = Program.listar("select * from usuario_provisorio");
 
         }
 
         private void rbtAutorizarMembresía_CheckedChanged(object sender, EventArgs e)
         {
-            Program.frmgestiondeusuarios.dataGridView1.DataSource = Program.listarUsuarios("select * from usuario_espera_pago");
+            dataGridView1.DataSource = Program.listar("select * from usuario_espera_pago");
             btnValidar.Visible = true;
         }
+
+        //este metodo esta pendiente para editar 
         private void btncrear_Click(object sender, EventArgs e)
 
         {
-
-
-            string privilegios ="";
-            string nombre, apellido, correo, nombreClave,sql;
-            int Rol=0;
-            bool validar = true;
-            bool validarRol = false;
-            object contFilas;
-            nombre = txtNombre.Text;
-            apellido = txtApellido.Text;
-            correo = txtcorreo.Text;
-            nombreClave = txtNombreDeUSuarioClave.Text;
-            //segun el rol que se seleccione se le otorgara su correspondiente previlegio
-            //en el caso del super usuario va a tener todos los permisos sobre la bdd sport360
-            if (rbSuperUs.Checked)
-            {
-                validarRol = true;
-                privilegios = "grant all privileges on *.* to '" + nombreClave + "'@'localhost';";
-                Rol = 1;
-            }
-             else if (rbAdmDepor.Checked)
-            {
-                validarRol = true;
-                privilegios = "grant all privileges on sport360.* to '" + nombreClave + "'@'localhost';";
-                Rol = 2;
-            }
-            else if (rbUsPago.Checked)
-            {
-                validarRol = true;
-                privilegios = "grant select on sport360.* to '" + nombreClave + "'@'localhost';";
-                Rol = 4;
-            }
-            else if (rbUsInvi.Checked)
-            {
-                validarRol = true;
-                privilegios = "grant select on sport360.* to '" + nombreClave + "'@'localhost';";
-                Rol = 3;
-            }
-
             if (txtNombre.Text.Equals(""))
             {
-                MessageBox.Show("Falta ingresar el nombre del usuario");
-                validar = false;
+                MessageBox.Show("Falta ingresar el Nombre");
+                return;
+            }
 
-            }
-            else if (txtApellido.Text.Equals(""))
+            if (txtcorreo .Text.Equals(""))
             {
-                MessageBox.Show("Falta ingresar el apellido del usuario");
-                validar = false;
+                MessageBox.Show("Falta ingresar el Email");
+                return;
             }
-            else if (txtcorreo.Text.Equals(""))
-            {
-                MessageBox.Show("Falta ingresar el email del usuario");
-                validar = false;
 
-            }
-            else if (txtNombreDeUSuarioClave.Text.Equals(""))
+            if (txtNombreDeUSuarioClave.Text.Equals(""))
             {
                 MessageBox.Show("Falta ingresar el nombre clave del usuario");
-                validar = false;
-
+                return;
             }
+            string nombre = txtNombre.Text;
+            string apellido = txtApellido.Text;
+            string email = txtcorreo.Text;
+            string nombreClave = txtNombreDeUSuarioClave.Text;
+            txtBuscar.Clear();
+            ADODB.Connection conexion = Program.conexion;
 
-            if (validarRol == false)
+            if (rbAdmDepor.Checked)
             {
-                MessageBox.Show("Falta seleccionar un rol para el usuario");
+
+            
+
+             Administrador adm = new Administrador(nombre, apellido, nombreClave, email, conexion);
+
+
+                switch (adm.darDeAlta())
+                {
+
+                    case 0:
+
+                        txtApellido.Clear();
+                        txtNombre.Clear();
+                        txtcorreo.Clear();
+                        txtNombreDeUSuarioClave.Clear();
+                        btncrear.Visible = false;
+                        rbAdmDepor.Checked = false;
+                        MessageBox.Show("Usuario creado con exito");
+                        break;
+
+                    case 1:
+                        MessageBox.Show("error al crear el usuario");
+                        break;
+
+                    case 2:
+                        MessageBox.Show("Error al insertar usuario administrador en la tabla usuario");
+                        break;
+                    case 3:
+
+                        MessageBox.Show("error al insertar el usuario administrador en la tabla usuario-adm");
+
+                        break;
+                    case 4:
+                        MessageBox.Show("error al otorgar privilegios");
+                        break;
+                }
+
+
+            }
+            else if (rbSuperUs.Checked)
+            {
+                SuperUsuario superuser = new SuperUsuario(nombre, apellido, nombreClave, email, conexion);
+                switch (superuser.DarDeAlta())
+                {
+                    case 0:
+                        txtApellido.Clear();
+                        txtNombre.Clear();
+                        txtcorreo.Clear();
+                        txtNombreDeUSuarioClave.Clear();
+                        btncrear.Visible = false;
+                        rbSuperUs.Checked = false;
+                        MessageBox.Show("Usuario creado con exito");
+                        break;
+                    case 1:
+                        MessageBox.Show("Perdida de conexion");
+                        break;
+                    case 2:
+                        MessageBox.Show("error al crear el usuario");
+                        break;
+                    case 3:
+                        MessageBox.Show("error al insertar en la tabla usuario");
+                        break;
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe elegir un rol para el administrador");
             }
 
-            if (validar && validarRol) {
-                
-                Usuario nuevo = new Usuario();
-                bool res;
-                int a;
-                string str = txtid.Text;
-                res = int.TryParse(str, out a);
-                nuevo.id = a;
-                nuevo.nombre = txtNombre.Text;
-                nuevo.apellido = txtApellido.Text;
-                nuevo.email = txtcorreo.Text;
-                nuevo.rol = Rol;
-                nuevo.nombreUsuario = txtNombreDeUSuarioClave.Text;
-                nuevo.contraseña = txtContraseña.Text;
-
-                nuevo.Guardar(true);
 
 
 
-                Program.frmgestiondeusuarios.dataGridView1.DataSource = Program.listarUsuarios("select * from usuario where rol= " + Rol + "; ");
-                Program.LimpiarCampos();
 
-            }
 
-           
 
         }
 
@@ -169,101 +252,93 @@ namespace WindowsFormsApp10
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            
-            object contFilas;
-            string nombre_clave = txtNombreDeUSuarioClave.Text;
-            string sql = "delete from usuario where nombre_clave = '" + nombre_clave + "';";
+            Usuario usuario = new Usuario();
+            usuario.nombreUsuario = txtNombreDeUSuarioClave.Text;
+            DialogResult respuesta;
+            respuesta = MessageBox.Show("Esta seguro? ", "Eliminar?", MessageBoxButtons.YesNoCancel);
+            if(respuesta == DialogResult.Yes)
+            {
+                usuario.conexion = Program.conexion;
+                switch (usuario.Eliminar())
+                    
+                {
+                    case 0:
+                        btnEliminar.Visible = false;
+                        btnModificar.Visible = false;
+                        Program.LimpiarCampos();
+                        Program.frmgestiondeusuarios.dataGridView1.DataSource = null;
+                        break;
+                    case 1:
+                        MessageBox.Show("se perdio la conexion");
+                        break;
+                    case 2:
+                        MessageBox.Show("error al eliminar al usuario ");
+                        break;
+                }
+
+            }
 
 
-            Program.conexion.Execute(sql, out contFilas);
-            Program.frmgestiondeusuarios.dataGridView1.DataSource = Program.listarUsuarios("select * from usuario;");
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            bool validar=true;
-            bool validarRol=false;
-            string privilegios;
-            object contFilas;
-            string nombre = txtNombre.Text;
-            string apellido = txtApellido.Text;
-            string correo = txtcorreo.Text;
-            string nombreClave = txtNombreDeUSuarioClave.Text;
-            string id = txtid.Text;
-            int Rol = 0;
+            int rol=0;
+            Usuario usuario = new Usuario();
+            DialogResult respuesta;
+           
             if (rbSuperUs.Checked)
             {
-                validarRol = true;
-                Rol = 1;
-               
+                rol = 1;
+                txtrol.Text = "1";
             }
             else if (rbAdmDepor.Checked)
             {
-                
-                validarRol = true;
-                Rol = 2;
-            }
-            else if (rbUsPago.Checked)
-            {
-                validarRol = true;
-                
-                Rol = 4;
+                rol = 2;
+                txtrol.Text = "2";
             }
             else if (rbUsInvi.Checked)
             {
-                
-                validarRol = true;
-                Rol = 3;
+                rol = 3;
+                txtrol.Text = "3";
             }
-
-            if (txtNombre.Text.Equals(""))
+            else if (rbUsPago.Checked)
             {
-                MessageBox.Show("Falta ingresar el nombre del usuario");
-                validar = false;
-
+                rol = 4;
+                txtrol.Text = "4";
             }
-            else if (txtApellido.Text.Equals(""))
+            else
             {
-                MessageBox.Show("Falta ingresar el apellido del usuario");
-                validar = false;
+                int.TryParse(txtrol.Text,out rol);
             }
-            else if (txtcorreo.Text.Equals(""))
+
+           
+
+            usuario.nombre = txtNombre.Text;
+            usuario.apellido = txtApellido.Text;
+            usuario.email = txtcorreo.Text;
+            usuario.conexion = Program.conexion;
+            usuario.nombreUsuario = txtNombreDeUSuarioClave.Text;
+            usuario.rol = rol;
+
+            respuesta = MessageBox.Show("Nombre: "+usuario.nombre+"\nApellido: "+usuario.apellido+"\ncorreo: "+usuario.email+"\nRol: "+usuario.rol,"Desea actualizar los sigientes datos"
+                , MessageBoxButtons.YesNoCancel);
+            if (respuesta == DialogResult.Yes)
             {
-                MessageBox.Show("Falta ingresar el email del usuario");
-                validar = false;
-
-            }
-            else if (txtNombreDeUSuarioClave.Text.Equals(""))
-            {
-                MessageBox.Show("Falta ingresar el nombre clave del usuario");
-                validar = false;
-
-            }
-
-            if(validarRol==false){
-                MessageBox.Show("Falta seleccionar un rol para el usuario");
-            }
-
-            if (validar && validarRol)
-            {
-               
-                
-               
-                string sql = "update usuario set NOMBRE= '" + nombre + "',APELLIDO= '" + apellido + "',EMAIL='" + correo + "',rol='" + Rol + "', nombre_clave='" + nombreClave + "' where id_USUARIO=" + id + " ;";
-                    
-
-                try
+                switch (usuario.Modificar())
                 {
-
-                    Program.conexion.Execute(sql, out contFilas);
+                    case 0:
+                        Program.LimpiarCampos();
+                        Program.frmgestiondeusuarios.dataGridView1.DataSource = null;
+                        btnModificar.Visible = false;
+                        break;
+                    case 1:
+                        MessageBox.Show("Se perdio la conexion");
+                        break;
+                    case 2:
+                        MessageBox.Show("Problemas para modificar los datos, asegurece de haber ingresado los datos correctamente");
+                        break;
                 }
-                catch
-                {
-                    MessageBox.Show("Los datos no fueron ingresados correctamente ");
-                    return;
-                }
-
-                Program.frmgestiondeusuarios.dataGridView1.DataSource = Program.listarUsuarios("select * from usuario where rol= " + Rol + "; ");
 
             }
 
@@ -271,28 +346,85 @@ namespace WindowsFormsApp10
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
-            //se carga en un datagridview la respuesta a la consulta mediante el metodo listarUsuarios()
-            string nombre = txtBuscar.Text;
-            Program.frmgestiondeusuarios.dataGridView1.DataSource = Program.listarUsuarios("select * from usuario where nombre_clave= '" +nombre + "'; ");
+            
+            int posicion;
+            
+            Usuario usuario = new Usuario();
+
+            usuario.nombreUsuario = txtBuscar.Text;
+            usuario.conexion = Program.conexion;
+            
+            if (usuario.conexion.State==0)
+            {
+                MessageBox.Show("error de conexion");
+                return;
+            }
+            else
+            {
+                if(txtBuscar.Text.Length == 0)
+                {
+                    MessageBox.Show("debe ingresar un nombre clave");
+                    return;
+                }
+              
+            }
+            try
+            {
+                dataGridView1.DataSource = usuario.Buscar();
+            }
+            catch 
+            {
+
+                MessageBox.Show("error de conexion");
+            }
+           
+
+           
+
+           if (dataGridView1.RowCount>1)
+            {
+               
+                btncrear.Visible = false;
+
+            }
+            else
+            { 
+                                             
+                     DialogResult respuesta = MessageBox.Show("Desea crearlo?", "El usuario no existe", MessageBoxButtons.YesNoCancel);
+                     if (respuesta == DialogResult.Yes)
+                     {
+                         btncrear.Visible = true;
+                         btnEliminar.Visible = false;
+                            btnModificar.Visible = false;
+                                string nombreClave= txtBuscar.Text;
+                                       Program.LimpiarCampos();
+                         txtNombreDeUSuarioClave.Enabled = true;
+
+                                txtNombreDeUSuarioClave.Text = nombreClave;
+                         
+
+
+
+                     }
+            }
 
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Program.LimpiarCampos();
+           dataGridView1.DataSource = null;
+            btnModificar.Visible = false;
+            btnEliminar.Visible = false;
+            btncrear.Visible = false;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            posicion = dataGridView1.CurrentRow.Index;
+            int posicion;
 
-            if (rbtAutorizarMembresía.Checked)
-            {
-                txtNombreDeUSuarioClave.Text = dataGridView1[0, posicion].Value.ToString();
-            }
-            else
-            {
-                posicion = dataGridView1.CurrentRow.Index;
+
+            posicion = dataGridView1.CurrentRow.Index;
 
                 txtid.Text = dataGridView1[0, posicion].Value.ToString();
                 txtNombre.Text = dataGridView1[1, posicion].Value.ToString();
@@ -300,21 +432,53 @@ namespace WindowsFormsApp10
                 txtcorreo.Text = dataGridView1[3, posicion].Value.ToString();
                 txtrol.Text = dataGridView1[4, posicion].Value.ToString();
                 txtNombreDeUSuarioClave.Text = dataGridView1[5, posicion].Value.ToString();
-                txtContraseña.Text = dataGridView1[6, posicion].Value.ToString();
 
+            if (txtNombre != null) {
+                
+                btnEliminar.Visible = true;
+                btnModificar.Visible = true;
+                btncrear.Visible = false;
+                txtNombreDeUSuarioClave.Enabled = false;
+                
+                
             }
 
+            
+
         }
+
         //VALIDA SUSCRIPCIÓN
         private void btnValidar_Click(object sender, EventArgs e)
         {
-            Usuario_Pago pago = new Usuario_Pago();
+            Program.DarDeAltaUsuarioPago();
+           
 
-            pago.nombreUsuario = txtNombreDeUSuarioClave.Text;
-            pago.fechaDePago = dtpFecha.DataBindings.ToString();
+
             
-            pago.GuardarMembresia();
-            txtNombreDeUSuarioClave.Clear();
+        }
+
+        private void btnDarDeAltaUsEsp_Click(object sender, EventArgs e)
+        {
+
+            Program.darDeAltaUsuarioProvisorio();
+            
+            
+            
+        }
+
+        private void txtid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbUsInvi_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbSuperUs_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

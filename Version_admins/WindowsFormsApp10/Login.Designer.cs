@@ -99,6 +99,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtNombre);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

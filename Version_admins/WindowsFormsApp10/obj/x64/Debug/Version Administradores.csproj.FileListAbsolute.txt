@@ -46,3 +46,51 @@ D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug
 D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csproj.CopyComplete
 D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.exe
 D:\Documents\Repositorio Proyecto\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.pdb
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\bin\x64\Debug\WindowsFormsApp10.exe.config
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\bin\x64\Debug\WindowsFormsApp10.exe
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\bin\x64\Debug\WindowsFormsApp10.pdb
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\bin\x64\Debug\fr-BI\WindowsFormsApp10.resources.dll
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\bin\x64\Debug\Newtonsoft.Json.dll
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\bin\x64\Debug\StreamJsonRpc.dll
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\bin\x64\Debug\Newtonsoft.Json.xml
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\bin\x64\Debug\es\StreamJsonRpc.resources.dll
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csprojAssemblyReference.cache
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\x64\Debug\Interop.ADODB.dll
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csproj.ResolveComReference.cache
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Eventos.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.GestionDeEventos.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.GestionDeUsuarios.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Login.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Principal.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Properties.Resources.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Principal.fr-BI.resources
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csproj.GenerateResource.cache
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csproj.CoreCompileInputs.cache
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\x64\Debug\fr-BI\WindowsFormsApp10.resources.dll
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csproj.CopyComplete
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.exe
+C:\Users\fabio\OneDrive\Escritorio\ClonesDeGitHub\injectical\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.pdb
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csprojAssemblyReference.cache
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\obj\x64\Debug\Interop.ADODB.dll
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csproj.ResolveComReference.cache
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Eventos.resources
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.GestionDeEventos.resources
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.GestionDeUsuarios.resources
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Login.resources
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Principal.resources
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Properties.Resources.resources
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csproj.GenerateResource.cache
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csproj.CoreCompileInputs.cache
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.exe
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.pdb
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\bin\x64\Debug\WindowsFormsApp10.exe.config
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\bin\x64\Debug\WindowsFormsApp10.exe
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\bin\x64\Debug\WindowsFormsApp10.pdb
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\bin\x64\Debug\Newtonsoft.Json.dll
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\bin\x64\Debug\StreamJsonRpc.dll
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\bin\x64\Debug\Newtonsoft.Json.xml
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\bin\x64\Debug\es\StreamJsonRpc.resources.dll
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\obj\x64\Debug\Version Administradores.csproj.CopyComplete
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.Banners.resources
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.GestionDePropaganda.resources
+C:\Users\fabio\OneDrive\Escritorio\APP_para segunda entrega\Version_admins\WindowsFormsApp10\obj\x64\Debug\WindowsFormsApp10.GestionDetalles.resources

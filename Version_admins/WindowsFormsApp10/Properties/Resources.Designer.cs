@@ -63,6 +63,16 @@ namespace WindowsFormsApp10.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imagen {
+            get {
+                object obj = ResourceManager.GetObject("imagen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngtree_sports_motion_silhouette_sports_poster_image_14841 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-sports-motion-silhouette-sports-poster-image_14841", resourceCulture);

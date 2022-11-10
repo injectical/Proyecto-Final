@@ -296,3 +296,5 @@ CREATE TABLE `usuario_provisorio` (
   PRIMARY KEY (`id`)
 );
 
+alter table usuario_espera_pago 
+add id_usuario int not null; 

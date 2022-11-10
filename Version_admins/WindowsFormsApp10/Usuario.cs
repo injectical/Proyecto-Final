@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data;
+using System.Data.OleDb;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,36 +16,39 @@ namespace WindowsFormsApp10
         protected string _apellido;
         protected string _nombreUsuario;
         protected string _email;
-        protected string _contraseña;
         protected int _rol;
+
         protected ADODB.Connection _conexion;
 
 
 
 
-        public Usuario(int id, string nom, string ap, string nomUser, string correo, string pass, int rol, ADODB.Connection conn)
+        public Usuario(string nom, string ap,
+            string nomUser, string correo, ADODB.Connection conn)
         {
-            _id = id;
+
             _nombre = nom;
             _apellido = ap;
             _nombreUsuario = nomUser;
             _email = correo;
-            _contraseña = pass;
-            _rol = rol;
+
             _conexion = conn;
+
         }
 
         public Usuario()
         {
-            _id = 0;
+
             _nombre = "";
             _apellido = "";
             _nombreUsuario = "";
             _email = "";
-            _contraseña = "";
-            _rol = 0;
             _conexion = new ADODB.Connection();
+
         }
+
+
+
 
         public int id
         {
@@ -115,18 +120,7 @@ namespace WindowsFormsApp10
             }
         }
 
-        public string contraseña
-        {
-            get
-            {
-                return (_contraseña);
-            }
 
-            set
-            {
-                _contraseña = value;
-            }
-        }
 
         public int rol
         {
@@ -142,95 +136,165 @@ namespace WindowsFormsApp10
             }
         }
 
-
-
-        public byte Guardar(bool alta)
+        public ADODB.Connection conexion
         {
-            byte resultado = 0;
-            string sql, sql2, sql1, sql3, sql4, sql5, sql6;
-            object contFilas;
+            get { return (_conexion); }
+            set { _conexion = value; }
+        }
 
-            _conexion = Program.conexion;
+
+        // la respuesta la adapta a una tabla del tipo DateTable
+        //para mostrar por pantalla hay que cargar el return de este metodo a una data gridview
+        // de la sigiente manera dataGridView1.DataSource=dt;
+        //
+
+        public DataTable Filtrar()
+        {
+            int rol = _rol;
+            object contFilas;
+            string sql = "";
+            ADODB.Recordset rs = new ADODB.Recordset();
+            switch (rol)
+            {
+                case 1:
+                   sql = "select * from usuario where rol=1;";
+                    break;
+                case 2:
+                    sql = "select * from usuario where rol=2; ";
+                    break;
+                case 3:
+                    sql = "select * from usuario where rol =3;";
+                    break;
+                case 4:
+                   sql="select * from usuario where rol =4;";
+                    break;
+            }
+
+            try
+            {
+                rs = _conexion.Execute(sql, out contFilas);
+            }
+
+            catch
+            {
+                throw;
+                
+
+
+            }
+
+            DataTable dt = new DataTable();
+            OleDbDataAdapter adapter = new OleDbDataAdapter();
+
+            adapter.Fill(dt, rs);
+            return dt;//si el dt esta vacio es porque no se encontro nada
+        }
+
+       /* public DataTable ObtenerUsuarios()
+        {
+            ADODB.Recordset rs = new ADODB.Recordset();
+            object contFilas;
+            string sql = "select * from usuario";
+            try
+            {
+                rs = _conexion.Execute(sql, out contFilas);
+            }
+
+            catch
+            {
+                throw;
+
+
+            }
+
+            DataTable dt = new DataTable();
+            OleDbDataAdapter adapter = new OleDbDataAdapter();
+
+            adapter.Fill(dt, rs);
+            return dt;//si el dt esta vacio es porque no se encontro nada
+        }*/
+
+        
+
+        public byte Modificar()
+        {
+              byte resultado = 0;
+              object contFilas;
+               string sql = "update usuario set nombre='"+_nombre+"',apellido='"+_apellido+"',email='"+_email+"' where nombre_clave='"+_nombreUsuario+"';";
+              if (_conexion.State == 0)
+              {
+                resultado = 1;//conexion cerrada
+              }
+              else
+              {
+                try
+                {
+                    _conexion.Execute(sql, out contFilas);
+                }
+                catch
+                {
+
+                    return (2);//no se realizo la modificacion 
+                }
+            
+              }
+              return resultado;//ok
+        }
+
+        public DataTable Buscar()
+
+        {
+            ADODB.Recordset rs = new ADODB.Recordset();
+            object contFilas;
+           
+            string sql = "select * from usuario where nombre_clave='" + _nombreUsuario + "';";
+            
+            try
+            {
+                rs = _conexion.Execute(sql, out contFilas);
+            }
+            catch 
+            {
+
+                throw;
+            }
+
+            DataTable dt = new DataTable();
+            OleDbDataAdapter adapter = new OleDbDataAdapter();
+
+            adapter.Fill(dt, rs);
+            return dt;//si el dt esta vacio es porque no se encontro nada
+
+        }
+
+
+
+        public byte Eliminar()
+        {
+
+            byte resultado = 0;
+            string sql;
+            object contlineas;
             if (_conexion.State == 0)
             {
-                resultado = 1; //conexion cerrada
-
+                resultado = 1;//no hay conexion
             }
             else
             {
-
-                if (alta)
+                sql = "delete from usuario where nombre_clave= '" + _nombreUsuario+"'";
+                string sqldrop =" DELETE FROM mysql.user WHERE user = '"+_nombreUsuario+"';";
+                try
                 {
-                    sql = "insert into usuario (nombre,apellido,email,rol,nombre_clave) values ('" + _nombre + "','" + _apellido + "','" + _email + "','" + _rol + "','" + _nombreUsuario + "')";
-
-                    sql1 = "create user" + "'" + _nombreUsuario + "'" + "@localhost identified by" + "'" + _contraseña + "'";
-                    sql2 = "grant select, update on sports360.usuario to" + "'" + _nombreUsuario + "'" + "@localhost";
-                    sql3 = "grant select, update on sports360.evento to" + "'" + _nombreUsuario + "'" + "@localhost";
-                    sql4 = "grant select, update on sports360.corresponde to" + "'" + _nombreUsuario + "'" + "@localhost";
-                    sql5 = "grant select, update on sports360.disciplina to" + "'" + _nombreUsuario + "'" + "@localhost";
-                    sql5 = "grant select, update on sports360.disciplina to" + "'" + _nombreUsuario + "'" + "@localhost";
-                    sql6 = "grant insert on sports360.usuario_espera_pago to" + "'" + _nombreUsuario + "'" + "@localhost";
-
-
-
-
-                    try
-                    {
-                        _conexion.Execute(sql, out contFilas);
-                        _conexion.Execute(sql1, out contFilas);
-                        _conexion.Execute(sql2, out contFilas);
-                        _conexion.Execute(sql3, out contFilas);
-                        _conexion.Execute(sql4, out contFilas);
-                        _conexion.Execute(sql5, out contFilas);
-                        _conexion.Execute(sql6, out contFilas);
-
-                        MessageBox.Show("Se ha autorizado al usuario con éxito");
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Hubo un problema al crear el usuario");
-
-                        return (2);
-                    }
-
-
-                    sql6 = "delete from usuario_provisorio where nombre_clave='" + nombreUsuario + "';";
-
-                    try
-                    {
-                        _conexion.Execute(sql6, out contFilas);
-
-                    }
-                    catch
-                    {
-                        MessageBox.Show("No se borró de provisorios");
-
-                        return (2);
-
-                    }
+                    _conexion.Execute(sql, out contlineas);
+                    _conexion.Execute(sqldrop, out contlineas);
                 }
-                else
+                catch
                 {
-                    sql = "update usuario set nombre ='" + _nombre + "',apellido='" + _apellido + "',email='" + _email + "',rol='" + _rol + "',nombre_clave='" + _nombreUsuario + "';";
-
-                    try
-                    {
-                        _conexion.Execute(sql, out contFilas);
-
-                        MessageBox.Show("Actualización exitosa");
-
-                    }
-                    catch
-                    {
-                        MessageBox.Show("No se actualizaron los datos");
-
-                        return (2);
-                    }
+                    return (2);//error al intentar eliminar el usuario
                 }
 
-            } 
-            return (3);
-
+            }
+            return resultado;// usuario eliminado
         }
     }
 }
