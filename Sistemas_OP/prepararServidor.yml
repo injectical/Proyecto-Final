@@ -1,0 +1,40 @@
+---
+
+- name: Crear tarea de respaldo diario
+  hosts: localhost 
+  tasks:
+    - ansible.builtin.cron:
+        name: "Respaldo diario"
+        minute: "0"
+        hour: "1"
+        day: "*"
+        month: "*"
+        weekday: "*"
+        job: Scripts/respaldoDiarioIncremental.sh 
+
+- name: Crear tarea de respaldo semanal
+  hosts: localhost
+  tasks:
+     - ansible.builtin.cron: 
+        name: "Respaldo semanal"
+        minute: "10"
+        hour: "1"
+        day: "*"
+        month: "*"
+        weekday: "0"
+        job: Scripts/respaldoSemanal.sh
+
+- name: Instalar mysql
+  hosts: localhost
+  tasks: 
+     - name: Instalar mysql
+       ansible.builtin.yum:
+        name: mysql
+        state: present
+       
+- name: Instalar reglas de iptables
+  hosts: localhost
+  tasks:     
+      - name: Crear politicas
+        ansible.builtin.script: Scripts/politicas.sh
+      
